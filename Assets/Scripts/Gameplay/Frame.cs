@@ -1,0 +1,41 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Frame : MonoBehaviour
+{
+    public List<Light> lights;
+    public Painting border;
+    public Page page;
+    public Collider2D rackCollider;
+    void Awake()
+    {
+        if (border == null)
+        {
+            border = transform.Find("Border").GetComponent<Painting>();
+        }
+        page = GetComponent<Page>();
+        if (rackCollider == null)
+        {
+            rackCollider = transform.Find("Rack").GetComponent<Collider2D>();
+        }
+    }
+    bool isActiveLastFrame = false;
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0) && !CursorManager.Instance.isCursorOverActiveZoneOfCanvas)
+        {
+            if (page != null && isActiveLastFrame)
+            {
+                page.Disappear();
+                StartCoroutine(ActiveRackCollider());
+            }
+        }
+        isActiveLastFrame = page.isActive;
+    }
+    IEnumerator ActiveRackCollider()
+    {
+        yield return new WaitForSeconds(0.5f);
+        rackCollider.enabled = true;
+    }
+}
