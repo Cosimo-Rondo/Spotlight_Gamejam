@@ -35,13 +35,15 @@ public class PropertyFilterAggregator: MonoBehaviour
     }
     public void UpdateAlpha()
     {
+        if (this == null) return;
+        GetComponents();
         alphaFilter = 1f;
         
         foreach (PropertyFilter filter in filters)
         {
             alphaFilter *= filter.alphaFilter;
         }
-        
+        Debug.Log(gameObject.name + " alphaFilter: " + alphaFilter);
         if (spriteRenderer != null)
         {
             Color color = spriteRenderer.color;

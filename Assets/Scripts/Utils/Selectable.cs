@@ -175,7 +175,7 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public virtual void Highlight()
     {
-        Debug.Log("Highlight");
+        //Debug.Log("Highlight");
         if (isHighlighted) return;
         //if (!IsPageActive()) return;
         /*

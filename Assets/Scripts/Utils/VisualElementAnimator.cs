@@ -143,6 +143,7 @@ public class VisualElementAnimator : MonoBehaviour
             {
                 if (appearParams.useFade)
                 {
+                    //Debug.Log(filter.gameObject.name + " set to " + disappearParams.fadeTarget);
                     filter.SetAlphaFilter(disappearParams.fadeTarget);
                 }
                 else

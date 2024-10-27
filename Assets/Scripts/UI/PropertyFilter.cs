@@ -15,7 +15,7 @@ public class PropertyFilter : MonoBehaviour
     public void UpdateAlpha()
     {
         if (this == null) return;
-        PropertyFilterAggregator aggregator = GetComponentInParent<PropertyFilterAggregator>();
+        PropertyFilterAggregator aggregator = GetComponent<PropertyFilterAggregator>();
         if (aggregator != null)
         {
             aggregator.UpdateAlpha();
@@ -24,7 +24,7 @@ public class PropertyFilter : MonoBehaviour
     public void Save()
     {
         if (this == null) return;
-        PropertyFilterAggregator aggregator = GetComponentInParent<PropertyFilterAggregator>();
+        PropertyFilterAggregator aggregator = GetComponent<PropertyFilterAggregator>();
         if (aggregator != null)
         {
             aggregator.Save();

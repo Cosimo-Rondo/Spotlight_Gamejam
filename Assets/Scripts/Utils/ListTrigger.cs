@@ -25,7 +25,14 @@ public class ListTrigger : MonoBehaviour
         foreach (EventTimePair pair in eventTimePairs)
         {
             pair.eventToTrigger.Invoke();
-            yield return new WaitForSeconds(pair.delayInSeconds);
+            if (pair.delayInSeconds >= 0)
+            {
+                yield return new WaitForSeconds(pair.delayInSeconds);
+            }
+            else
+            {
+                yield return new WaitUntil(() => Input.anyKeyDown);
+            }
         }
     }
 }
