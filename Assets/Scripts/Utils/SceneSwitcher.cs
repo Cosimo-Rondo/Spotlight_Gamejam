@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneSwitcher : MonoBehaviour
-{
+{   
     private static SceneSwitcher _instance;
     public static SceneSwitcher Instance
     {
@@ -31,10 +31,8 @@ public class SceneSwitcher : MonoBehaviour
         else
         {
             _instance = this;
-            DontDestroyOnLoad(this.gameObject);
         }
     }
-
     // Start is called before the first frame update
     void Start()
     {
