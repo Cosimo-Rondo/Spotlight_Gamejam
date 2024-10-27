@@ -37,6 +37,8 @@ public class AudioManager : MonoBehaviour
     private Dictionary<string, AudioSource> audiosDic;
     // 场景名对应BGM的字典
     private Dictionary<string, string> 场景名对应BGM = new Dictionary<string, string>();
+    // 当前播放的BGM
+    private string currentBGM;
 
     // 单例模式
     private static AudioManager _instance;
@@ -56,12 +58,6 @@ public class AudioManager : MonoBehaviour
         foreach (var sceneBGM in 场景BGM列表)
         {
             场景名对应BGM[sceneBGM.sceneName] = sceneBGM.bgmName;
-        }
-
-        // 播放当前场景对应的BGM
-        if (场景名对应BGM.ContainsKey(SceneManager.GetActiveScene().name))
-        {
-            PlayAudio(场景名对应BGM[SceneManager.GetActiveScene().name], false);
         }
 
         // 初始化
@@ -93,6 +89,14 @@ public class AudioManager : MonoBehaviour
 
             audiosDic.Add(sound.clip.name, source);
         }
+
+        // 播放当前场景对应的BGM
+        if (场景名对应BGM.ContainsKey(SceneManager.GetActiveScene().name))
+        {
+            StopBGM();
+            PlayAudio(场景名对应BGM[SceneManager.GetActiveScene().name], false);
+            currentBGM = 场景名对应BGM[SceneManager.GetActiveScene().name];
+        }
     }
 
     /// <summary>
@@ -119,16 +123,28 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public static void PlayAudioNoWait(string name)
+    public static void PlaySFXNoWait(string name)
     {
-        PlayAudio(name, false);
+        if (!_instance.audiosDic.ContainsKey(name) || _instance.audiosDic[name].outputAudioMixerGroup.name != "SFX")
+        {
+            Debug.LogWarning($"名为{name}的音频不在SFX组，或不存在");
+            return;
+        }
+        {
+            PlayAudio(name, false);
+        }
     }
-
-    public static void PlayAudioWait(string name)
+    public static void PlaySFXWait(string name)
     {
-        PlayAudio(name, true);
+        if (!_instance.audiosDic.ContainsKey(name) || _instance.audiosDic[name].outputAudioMixerGroup.name != "SFX")
+        {
+            Debug.LogWarning($"名为{name}的音频不在SFX组，或不存在");
+            return;
+        }
+        {
+            PlayAudio(name, true);
+        }
     }
-
     /// <summary>
     /// 停止某一音频的播放
     /// </summary>
@@ -141,5 +157,48 @@ public class AudioManager : MonoBehaviour
             return;
         }
         _instance.audiosDic[name].Stop();
+    }
+
+    /// <summary>
+    /// 停止当前播放的 BGM
+    /// </summary>
+    public static void StopBGM()
+    {
+        if (!string.IsNullOrEmpty(_instance.currentBGM) && _instance.audiosDic.ContainsKey(_instance.currentBGM))
+        {
+            _instance.audiosDic[_instance.currentBGM].Stop();
+            _instance.currentBGM = null;
+        }
+    }
+
+    /// <summary>
+    /// 播放 BGM
+    /// </summary>
+    /// <param name="name">BGM 名称</param>
+    public static void PlayBGM(string name)
+    {
+        if (!_instance.audiosDic.ContainsKey(name) || _instance.audiosDic[name].outputAudioMixerGroup.name != "BGM")
+        {
+            Debug.LogWarning($"名为{name}的音频不在BGM组，或不存在");
+            return;
+        }
+        {
+            StopBGM();
+            PlayAudio(name, false);
+            _instance.currentBGM = name;
+        }
+    }
+    /// <summary>
+    /// 停止所有 SFX 的播放
+    /// </summary>
+    public static void StopAllSFX()
+    {
+        foreach (var audio in _instance.audiosDic)
+        {
+            if (audio.Value.outputAudioMixerGroup.name == "SFX")
+            {
+                audio.Value.Stop();
+            }
+        }
     }
 }
