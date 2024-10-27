@@ -26,6 +26,7 @@ public class PuzzleLock : MonoBehaviour
     // Event to notify when the lock status changes
     public UnityEvent<bool> onStatusChanged;
     public UnityEvent onUnlocked;
+    public UnityEvent onLocked;
 
     [SerializeField]
     private bool isUnlocked = false;
@@ -87,6 +88,7 @@ public class PuzzleLock : MonoBehaviour
         if (!reusable) return;
         isUnlocked = false;
         onStatusChanged.Invoke(false);
+        onLocked?.Invoke();
     }
 
     bool IsGate()

@@ -37,6 +37,12 @@ public class LetterDisplayer : MonoBehaviour
     {
         StartCoroutine(DisplaySentences());
     }
+    public void PlayLetterOfName(string name)
+    {
+        letterData = Resources.Load<LetterData>("Letter/" + name);
+        Init();
+        PlayLetter();
+    }
 
     IEnumerator DisplaySentences()
     {
