@@ -114,8 +114,9 @@ public class VisualElementAnimator : MonoBehaviour
 
     public virtual void Appear()
     {
+        
         if (isActive) return;
-        //Debug.Log(gameObject.name + " Appear");
+        Debug.Log(gameObject.name + " Appear");
         isActive = true;
         //Debug.Log(gameObject.name + " before kill " + sequence.IsActive());
         DOTween.Kill(this);

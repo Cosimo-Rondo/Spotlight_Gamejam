@@ -24,6 +24,11 @@ public class PuzzleItem : MonoBehaviour
             originalAlpha = spriteRenderer.color.a;
         }
         selectable = GetComponent<Selectable>();
+        if (selectable == null)
+        {
+            selectable = gameObject.AddComponent<Selectable>();
+            selectable.highlightType = Selectable.HighlightType.Scale;
+        }
         originalLocalPos = transform.localPosition;
     }
     bool isDragging = false;
