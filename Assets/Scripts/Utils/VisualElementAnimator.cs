@@ -39,10 +39,11 @@ public class VisualElementAnimator : MonoBehaviour
             contentsRoot = transform.Find("Contents");
         }
         InitializePropertyFilters();
+
         if (hideOnStart)
         {
             isActive = false;
-            if (contentsRoot != null)contentsRoot.gameObject.SetActive(false);
+            if (contentsRoot != null) contentsRoot.gameObject.SetActive(false);
             InitFilterAlpha(true);
             if (disappearParams.useMove)
             {
@@ -65,7 +66,10 @@ public class VisualElementAnimator : MonoBehaviour
         }
         else {
             isActive = true;
-            if (contentsRoot != null) contentsRoot.gameObject.SetActive(true);
+            if (contentsRoot != null) {
+                contentsRoot.gameObject.SetActive(true);
+                Debug.Log(gameObject.name + " activate contentsRoot");
+            }
             InitFilterAlpha(false);
             if (appearParams.useMove)
             {

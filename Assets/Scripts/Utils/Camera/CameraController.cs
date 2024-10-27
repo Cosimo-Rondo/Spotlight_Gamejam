@@ -9,7 +9,7 @@ public class CameraController : MonoBehaviour
     public CameraPoint initialCameraPoint;
     public Vector3 targetPos;
     public float smoothSpeed = 0.125f;
-    private CameraPoint currentCameraPoint;
+    public CameraPoint currentCameraPoint;
     public VisualElementAnimator switchSceneMask;
 
     void Awake()
@@ -29,10 +29,6 @@ public class CameraController : MonoBehaviour
         if (initialCameraPoint != null)
         {
             SwitchToCameraPoint(initialCameraPoint, 0.5f);
-        }
-        if (switchSceneMask != null)
-        {
-            switchSceneMask.Disappear();
         }
     }
 
