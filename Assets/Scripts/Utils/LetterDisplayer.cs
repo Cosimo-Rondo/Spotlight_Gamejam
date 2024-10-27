@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class LetterDisplayer : MonoBehaviour
 {
@@ -13,8 +14,13 @@ public class LetterDisplayer : MonoBehaviour
 
     private List<string> sentences;
     private int currentSentenceIndex = 0;
+    public UnityEvent onLetterDone;
 
     void Start()
+    {
+        Init();
+    }
+    void Init()
     {
         if (letterData != null)
         {
@@ -27,7 +33,6 @@ public class LetterDisplayer : MonoBehaviour
 
         textDisplay.text = "";
     }
-
     public void PlayLetter()
     {
         StartCoroutine(DisplaySentences());
@@ -35,17 +40,27 @@ public class LetterDisplayer : MonoBehaviour
 
     IEnumerator DisplaySentences()
     {
+        Init();
         foreach (string sentence in sentences)
         {
             yield return StartCoroutine(FadeInSentence(sentence));
-            yield return new WaitForSeconds(delayBetweenSentences);
+            if (delayBetweenSentences > 0)
+            {
+                yield return new WaitForSeconds(delayBetweenSentences);
+            }
+            else
+            {
+                yield return new WaitUntil(() => Input.anyKeyDown);
+                yield return new WaitForSeconds(0.07f);
+            }
         }
+        onLetterDone.Invoke();
     }
 
     IEnumerator FadeInSentence(string sentence)
     {
         int startIndex = textDisplay.text.Length;
-        textDisplay.text += sentence + "\n";
+        textDisplay.text += sentence.Replace("\\n", "\n") + "\n";
         textDisplay.ForceMeshUpdate();
 
         TMP_TextInfo textInfo = textDisplay.textInfo;
