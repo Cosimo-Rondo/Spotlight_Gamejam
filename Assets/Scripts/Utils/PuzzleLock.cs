@@ -54,7 +54,7 @@ public class PuzzleLock : MonoBehaviour
     {
         if (lockType == LockType.Item)
         {
-            if (detectArea != null)
+            if (!isUnlocked && detectArea != null)
             {
                 if (detectArea.IsHighlighted())
                 {
@@ -77,6 +77,10 @@ public class PuzzleLock : MonoBehaviour
         isUnlocked = true;
         onStatusChanged.Invoke(true);
         onUnlocked.Invoke();
+        if (lockType == LockType.Item)
+        {
+            CursorManager.Instance.RemoveCurrentItemTargetArea(this);
+        }
         return true;
     }
     public void TriggerUnlock()

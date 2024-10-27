@@ -223,4 +223,14 @@ public class VisualElementAnimator : MonoBehaviour
             });
         }
     }
+    public void Appear(float duration)
+    {
+        appearParams.duration = duration;
+        Appear();
+    }
+    public void Disappear(float duration)
+    {
+        disappearParams.duration = duration;
+        Disappear();
+    }
 }
