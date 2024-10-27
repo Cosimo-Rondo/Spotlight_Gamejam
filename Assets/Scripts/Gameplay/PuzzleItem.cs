@@ -32,7 +32,7 @@ public class PuzzleItem : MonoBehaviour
         bool isHighlighted = selectable.IsHighlighted();
         if (isHighlighted && Input.GetMouseButton(0))
         {
-            if (!isDragging)
+            if (!isDragging && CursorManager.Instance.currentPuzzleItem == null)
             {
                 isDragging = true;
                 CursorManager.Instance.SetCurrentPuzzleItem(GetComponent<PuzzleItem>());
@@ -54,9 +54,9 @@ public class PuzzleItem : MonoBehaviour
     }
     void OnRelease()
     {
-        PuzzleLock targetArea = CursorManager.Instance.currentItemTargetArea;
+        List<PuzzleLock> targetAreas = CursorManager.Instance.currentItemTargetAreas;
         bool accepted = false;
-        if (targetArea != null)
+        foreach (PuzzleLock targetArea in targetAreas)
         {
             if (!targetArea.useItemCode)
             {
@@ -66,11 +66,12 @@ public class PuzzleItem : MonoBehaviour
             {
                 if (targetArea.requiredItemCode == itemCode) accepted = true;
             }
-        }
-        if (accepted)
-        {
-            targetArea.TriggerUnlock();
-            Accepted();
+            if (accepted)
+            {
+                targetArea.TriggerUnlock();
+                Accepted();
+                break;
+            }
         }
         transform.localPosition = originalLocalPos;
         isDragging = false;

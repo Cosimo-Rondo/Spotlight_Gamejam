@@ -25,37 +25,45 @@ public class CameraPoint : MonoBehaviour
         {
             targetCamera = Camera.main.GetComponent<CameraController>();
         }
-        // if (leftLimit != null)
-        // {
-        //     leftLimit.GetComponent<CameraLimit>().cameraPoint = this;
-        // }
-        // if (rightLimit != null)
-        // {
-        //     rightLimit.GetComponent<CameraLimit>().cameraPoint = this;
-        // }
-        // if (topLimit != null)
-        // {
-        //     topLimit.GetComponent<CameraLimit>().cameraPoint = this;
-        // }
-        // if (bottomLimit != null)
-        // {
-        //     bottomLimit.GetComponent<CameraLimit>().cameraPoint = this;
-        // }
     }
 
     public void OnLeaveThis()
     {
-        if (leftLimit != null) leftLimit.gameObject.SetActive(false);
-        if (rightLimit != null) rightLimit.gameObject.SetActive(false);
-        if (topLimit != null) topLimit.gameObject.SetActive(false);
-        if (bottomLimit != null) bottomLimit.gameObject.SetActive(false);
+        if (leftLimit != null)
+        {
+            leftLimit.GetComponent<CameraLimit>().cameraPoint = null;
+        }
+        if (rightLimit != null)
+        {
+            rightLimit.GetComponent<CameraLimit>().cameraPoint = null;
+        }
+        if (topLimit != null)
+        {
+            topLimit.GetComponent<CameraLimit>().cameraPoint = null;
+        }
+        if (bottomLimit != null)
+        {
+            bottomLimit.GetComponent<CameraLimit>().cameraPoint = null;
+        }
     }
     public void OnEnterThis()
     {
-        if (leftLimit != null) leftLimit.gameObject.SetActive(true);
-        if (rightLimit != null) rightLimit.gameObject.SetActive(true);
-        if (topLimit != null) topLimit.gameObject.SetActive(true);
-        if (bottomLimit != null) bottomLimit.gameObject.SetActive(true);
+        if (leftLimit != null)
+        {
+            leftLimit.GetComponent<CameraLimit>().cameraPoint = this;
+        }
+        if (rightLimit != null)
+        {
+            rightLimit.GetComponent<CameraLimit>().cameraPoint = this;
+        }
+        if (topLimit != null)
+        {
+            topLimit.GetComponent<CameraLimit>().cameraPoint = this;
+        }
+        if (bottomLimit != null)
+        {
+            bottomLimit.GetComponent<CameraLimit>().cameraPoint = this;
+        }
     }
 
     public void SwitchToThis()

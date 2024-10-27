@@ -34,6 +34,11 @@ public class PuzzleLock : MonoBehaviour
     void Awake()
     {
         detectArea = GetComponent<Selectable>();
+        if (detectArea == null && lockType == LockType.Item)
+        {
+            detectArea = gameObject.AddComponent<Selectable>();
+            detectArea.highlightType = Selectable.HighlightType.None;
+        }
     }
     void Start()
     {
@@ -52,11 +57,12 @@ public class PuzzleLock : MonoBehaviour
             {
                 if (detectArea.IsHighlighted())
                 {
-                    CursorManager.Instance.SetCurrentItemTargetArea(this);
+                    Debug.Log("mouse enter target area");
+                    CursorManager.Instance.AddCurrentItemTargetArea(this);
                 }
                 else if (!detectArea.IsHighlighted() && isHighlightedLastFrame)
                 {
-                    CursorManager.Instance.SetCurrentItemTargetArea(null);
+                    CursorManager.Instance.RemoveCurrentItemTargetArea(this);
                 }
                 isHighlightedLastFrame = detectArea.IsHighlighted();
             }

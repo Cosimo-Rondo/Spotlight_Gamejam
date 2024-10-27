@@ -8,11 +8,11 @@ using UnityEngine.UIElements;
 
 public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public UnityEvent onSelectEvent;
-    public UnityEvent onUnselectEvent;
-    public UnityEvent onHighlightEvent;
-    public UnityEvent onUnhighlightEvent;
-    public UnityEvent onHoldEvent;
+    public UnityEvent onSelectEvent = new UnityEvent();
+    public UnityEvent onUnselectEvent = new UnityEvent();
+    public UnityEvent onHighlightEvent = new UnityEvent();
+    public UnityEvent onUnhighlightEvent = new UnityEvent();
+    public UnityEvent onHoldEvent = new UnityEvent();
     public SpriteRenderer spriteRenderer;
     public UnityEngine.UI.Image image;
     [SerializeField] private TMP_Text textMeshPro;

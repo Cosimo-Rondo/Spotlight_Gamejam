@@ -89,14 +89,15 @@ public class PolygonMaskGenerator : MonoBehaviour
     {
         foreach (PolygonCollider collider in interestedColliders)
         {
-            Debug.Log("Discover shape");
+            //Debug.Log("Discover shape");
             if (FullyContainShape(collider.shape))
             {
-                Debug.Log("Fully contain shape");
+                //Debug.Log("Fully contain shape");
                 bool intersectWithIrrelevantLights = false;
                 foreach(Light light in frame.lights)
                     if (!lights.Contains(light) && light.IsLightOn())
                     {
+                        if (light.shape == null) continue;
                         if (collider.shape.IntersectWithPolygon(light.shape))
                         {
                             intersectWithIrrelevantLights = true;

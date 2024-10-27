@@ -17,6 +17,7 @@ public class CameraLimit : MonoBehaviour
     }
     public UnityEvent onLimitReached;
     public UnityEvent onLimitExceeded;
+    public CameraPoint cameraPoint;
     enum LimitState
     {
         Reached,
@@ -27,6 +28,10 @@ public class CameraLimit : MonoBehaviour
     void Update()
     {
         if (cam == null) return;
+        if (cameraPoint == null) return;
+        CameraController cameraController = cam.GetComponent<CameraController>();
+        if (cameraController == null) return;
+        if (cameraController.currentCameraPoint != cameraPoint) return;
         if (Mathf.Abs(cam.transform.position.x - transform.position.x) < 0.01f)
         {
             if (limitState != LimitState.Reached)

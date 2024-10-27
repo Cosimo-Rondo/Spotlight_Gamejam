@@ -43,7 +43,7 @@ public class PropertyFilterAggregator: MonoBehaviour
         {
             alphaFilter *= filter.alphaFilter;
         }
-        Debug.Log(gameObject.name + " alphaFilter: " + alphaFilter);
+        //Debug.Log(gameObject.name + " alphaFilter: " + alphaFilter);
         if (spriteRenderer != null)
         {
             Color color = spriteRenderer.color;

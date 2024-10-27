@@ -6,7 +6,7 @@ public class CursorManager : MonoBehaviour
 {
     private static CursorManager _instance;
     public PuzzleItem currentPuzzleItem;
-    public PuzzleLock currentItemTargetArea;
+    public List<PuzzleLock> currentItemTargetAreas = new List<PuzzleLock>();
     public static CursorManager Instance
     {
         get
@@ -55,8 +55,13 @@ public class CursorManager : MonoBehaviour
     {
         currentPuzzleItem = puzzleItem;
     }
-    public void SetCurrentItemTargetArea(PuzzleLock puzzleLock)
+    public void AddCurrentItemTargetArea(PuzzleLock puzzleLock)
     {
-        currentItemTargetArea = puzzleLock;
+        if (currentItemTargetAreas.Contains(puzzleLock)) return;
+        currentItemTargetAreas.Add(puzzleLock);
+    }
+    public void RemoveCurrentItemTargetArea(PuzzleLock puzzleLock)
+    {
+        currentItemTargetAreas.Remove(puzzleLock);
     }
 }
