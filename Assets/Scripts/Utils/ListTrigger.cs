@@ -32,6 +32,7 @@ public class ListTrigger : MonoBehaviour
             else
             {
                 yield return new WaitUntil(() => Input.anyKeyDown);
+                yield return new WaitForSeconds(0.1f);
             }
         }
     }
