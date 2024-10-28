@@ -18,6 +18,7 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     [SerializeField] private TMP_Text textMeshPro;
     public Transform highlightTarget;
     public Collider2D mouseDetectArea;
+    public bool isUIElement = false;
     //public bool isActiveZoneForCanvas = false;
 
     public enum SelectType
@@ -120,6 +121,7 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     bool isDragging = false;
     protected virtual void Update()
     {
+        if (!isUIElement && CursorManager.Instance.isCursorOverUI) return;
         MouseHitCheck();
         if (selectType == SelectType.MouseClick)
         {
@@ -177,6 +179,8 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         //Debug.Log("Highlight");
         if (isHighlighted) return;
+        if (isUIElement) CursorManager.Instance.EnterUI();
+
         //if (!IsPageActive()) return;
         /*
         if (isActiveZoneForCanvas)
@@ -248,6 +252,7 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     public virtual void Unhighlight()
     {
         if (!isHighlighted) return;
+        if (isUIElement) CursorManager.Instance.LeaveUI();
         /*
         if (isActiveZoneForCanvas)
         {
@@ -306,6 +311,7 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     private void CustomizedOnMouseEnter()
     {
+        if (!isUIElement && CursorManager.Instance.isCursorOverUI) return;
         if (selectType == SelectType.MouseClick || selectType == SelectType.MouseHold)
         {
             Highlight();
@@ -314,6 +320,7 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     private void CustomizedOnMouseExit()
     {
+        if (!isUIElement && CursorManager.Instance.isCursorOverUI) return;
         if (selectType == SelectType.MouseClick || selectType == SelectType.MouseHold)
         {
             Unhighlight();
@@ -322,6 +329,7 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        if (!isUIElement && CursorManager.Instance.isCursorOverUI) return;
         if (selectType == SelectType.MouseClick || selectType == SelectType.MouseHold)
         {
             Highlight();
@@ -330,6 +338,7 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        if (!isUIElement && CursorManager.Instance.isCursorOverUI) return;
         if (selectType == SelectType.MouseClick || selectType == SelectType.MouseHold)
         {
             Unhighlight();

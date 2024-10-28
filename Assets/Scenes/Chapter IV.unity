@@ -296,7 +296,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -803,7 +802,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 1
   unhighlightOnSelect: 1
   selectType: 1
   highlightType: 4
@@ -985,7 +983,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -1211,7 +1208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
-  hideOnStart: 1
+  hideOnStart: 0
   appearParams:
     useFade: 1
     fadeTarget: 1
@@ -1520,9 +1517,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onLocked:
-    m_PersistentCalls:
-      m_Calls: []
   isUnlocked: 0
 --- !u!1 &57073813
 GameObject:
@@ -3505,7 +3499,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -3794,7 +3787,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -4513,7 +4505,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 398541774}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -5413,9 +5404,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onLocked:
-    m_PersistentCalls:
-      m_Calls: []
   isUnlocked: 0
 --- !u!114 &327136590
 MonoBehaviour:
@@ -6730,7 +6718,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 82877636}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -7108,7 +7095,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    delayInSeconds: 2
+    delayInSeconds: -1
   - eventToTrigger:
       m_PersistentCalls:
         m_Calls:
@@ -7757,7 +7744,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -8100,7 +8086,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -9195,7 +9180,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -9763,7 +9747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
-  hideOnStart: 0
+  hideOnStart: 1
   appearParams:
     useFade: 0
     fadeTarget: 1
@@ -10341,7 +10325,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -10587,7 +10570,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -10837,9 +10819,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onLocked:
-    m_PersistentCalls:
-      m_Calls: []
   isUnlocked: 0
 --- !u!114 &660509625
 MonoBehaviour:
@@ -10873,7 +10852,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 0
@@ -11365,7 +11343,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 0
@@ -11790,9 +11767,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onUnlocked:
-    m_PersistentCalls:
-      m_Calls: []
-  onLocked:
     m_PersistentCalls:
       m_Calls: []
   isUnlocked: 0
@@ -12534,6 +12508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPuzzleItem: {fileID: 0}
   currentItemTargetAreas: []
+  isCursorOverUI: 0
   isCursorOverActiveZoneOfCanvas: 0
 --- !u!4 &791808962
 Transform:
@@ -13820,9 +13795,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onLocked:
-    m_PersistentCalls:
-      m_Calls: []
   isUnlocked: 0
 --- !u!1 &894846156
 GameObject:
@@ -14246,9 +14218,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onLocked:
-    m_PersistentCalls:
-      m_Calls: []
   isUnlocked: 0
 --- !u!1 &917060609
 GameObject:
@@ -14673,7 +14642,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -15244,127 +15212,6 @@ MonoBehaviour:
   initialSegment: 2
   initialSegmentOffset: 0.1
   frame: {fileID: 0}
---- !u!1 &961766054
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 961766055}
-  - component: {fileID: 961766056}
-  m_Layer: 0
-  m_Name: Exit
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &961766055
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 961766054}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1335364513}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &961766056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 961766054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32821f6ee007d864eaeb71269e5861bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventTimePairs:
-  - eventToTrigger:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1335364514}
-          m_TargetAssemblyTypeName: VisualElementAnimator, Assembly-CSharp
-          m_MethodName: Disappear
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 17451887}
-          m_TargetAssemblyTypeName: VisualElementAnimator, Assembly-CSharp
-          m_MethodName: Appear
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 5
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    delayInSeconds: 5
-  - eventToTrigger:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 602151754}
-          m_TargetAssemblyTypeName: VisualElementAnimator, Assembly-CSharp
-          m_MethodName: Appear
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    delayInSeconds: 2
-  - eventToTrigger:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 17451887}
-          m_TargetAssemblyTypeName: VisualElementAnimator, Assembly-CSharp
-          m_MethodName: Disappear
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 1
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    delayInSeconds: 1
-  - eventToTrigger:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 971671140}
-          m_TargetAssemblyTypeName: DialoguePlayer, Assembly-CSharp
-          m_MethodName: Play
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 1
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    delayInSeconds: 1
 --- !u!1 &971671138
 GameObject:
   m_ObjectHideFlags: 0
@@ -15784,7 +15631,7 @@ MonoBehaviour:
   m_text: "\u54B3\u2026\u2026\u54B3\u2026\u2026"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2a1efe6720ed86844b26289e559be28c, type: 2}
-  m_sharedMaterial: {fileID: -8690575815284696626, guid: 2a1efe6720ed86844b26289e559be28c, type: 2}
+  m_sharedMaterial: {fileID: -2486042195744950913, guid: 2a1efe6720ed86844b26289e559be28c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -16335,7 +16182,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -17650,7 +17496,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -18549,9 +18394,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onLocked:
-    m_PersistentCalls:
-      m_Calls: []
   isUnlocked: 0
 --- !u!1 &1152118898
 GameObject:
@@ -19256,7 +19098,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 0
@@ -20080,7 +19921,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -20482,7 +20322,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -20847,7 +20686,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1645794711}
-  - {fileID: 961766055}
   m_Father: {fileID: 519420032}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21420,7 +21258,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -21826,7 +21663,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 7465411566077211125}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -21967,7 +21803,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 1
   unhighlightOnSelect: 1
   selectType: 1
   highlightType: 4
@@ -22381,7 +22216,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -22936,7 +22770,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -24158,7 +23991,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 1
@@ -24245,7 +24077,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 971671140}
+      - m_Target: {fileID: 936896853}
         m_TargetAssemblyTypeName: DialoguePlayer, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
@@ -24926,9 +24758,6 @@ MonoBehaviour:
   onUnlocked:
     m_PersistentCalls:
       m_Calls: []
-  onLocked:
-    m_PersistentCalls:
-      m_Calls: []
   isUnlocked: 0
 --- !u!1 &1552379103
 GameObject:
@@ -25468,7 +25297,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -25787,7 +25615,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -26624,7 +26451,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 1601620967}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -26882,7 +26708,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 0
@@ -27672,7 +27497,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 0
@@ -28821,7 +28645,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1727944312
 Transform:
   m_ObjectHideFlags: 0
@@ -29224,7 +29048,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -30868,9 +30691,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onLocked:
-    m_PersistentCalls:
-      m_Calls: []
   isUnlocked: 0
 --- !u!114 &1881381022
 MonoBehaviour:
@@ -31100,9 +30920,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  onLocked:
-    m_PersistentCalls:
-      m_Calls: []
   isUnlocked: 0
 --- !u!114 &1916565323
 MonoBehaviour:
@@ -31136,7 +30953,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 0
@@ -31367,7 +31183,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 0
@@ -31609,7 +31424,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -31884,9 +31698,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onLocked:
-    m_PersistentCalls:
-      m_Calls: []
   isUnlocked: 0
 --- !u!1 &1955245569
 GameObject:
@@ -32950,7 +32761,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -33515,7 +33325,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -33718,6 +33527,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2083375588}
   - component: {fileID: 2083375589}
+  - component: {fileID: 2083375590}
   m_Layer: 0
   m_Name: letterPlayer-B
   m_TagString: Untagged
@@ -33764,7 +33574,7 @@ MonoBehaviour:
   onLetterDone:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 961766056}
+      - m_Target: {fileID: 2083375590}
         m_TargetAssemblyTypeName: ListTrigger, Assembly-CSharp
         m_MethodName: TriggerEvents
         m_Mode: 1
@@ -33776,6 +33586,95 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2083375590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083375587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32821f6ee007d864eaeb71269e5861bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventTimePairs:
+  - eventToTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1335364514}
+          m_TargetAssemblyTypeName: VisualElementAnimator, Assembly-CSharp
+          m_MethodName: Disappear
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 17451887}
+          m_TargetAssemblyTypeName: VisualElementAnimator, Assembly-CSharp
+          m_MethodName: Appear
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 5
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    delayInSeconds: 5
+  - eventToTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 602151754}
+          m_TargetAssemblyTypeName: VisualElementAnimator, Assembly-CSharp
+          m_MethodName: Appear
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    delayInSeconds: 2
+  - eventToTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 655161761}
+          m_TargetAssemblyTypeName: VisualElementAnimator, Assembly-CSharp
+          m_MethodName: Disappear
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    delayInSeconds: 1
+  - eventToTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 971671140}
+          m_TargetAssemblyTypeName: DialoguePlayer, Assembly-CSharp
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    delayInSeconds: 1
 --- !u!1 &2091442215
 GameObject:
   m_ObjectHideFlags: 0
@@ -34143,9 +34042,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onLocked:
-    m_PersistentCalls:
-      m_Calls: []
   isUnlocked: 0
 --- !u!1 &2126248587
 GameObject:
@@ -34620,9 +34516,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onLocked:
-    m_PersistentCalls:
-      m_Calls: []
   isUnlocked: 0
 --- !u!1 &2145336883
 GameObject:
@@ -34987,7 +34880,6 @@ MonoBehaviour:
   textMeshPro: {fileID: 0}
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
-  isUIElement: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4

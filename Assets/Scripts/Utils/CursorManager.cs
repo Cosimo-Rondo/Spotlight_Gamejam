@@ -36,7 +36,8 @@ public class CursorManager : MonoBehaviour
         }
     }
 
-    public bool isCursorOverUI = false;
+    public bool isCursorOverUI { get; private set; } = false;
+    private int cursorOverUICount = 0;
     public bool isCursorOverActiveZoneOfCanvas = false;
 
     private void OnDestroy()
@@ -63,5 +64,21 @@ public class CursorManager : MonoBehaviour
     public void RemoveCurrentItemTargetArea(PuzzleLock puzzleLock)
     {
         currentItemTargetAreas.Remove(puzzleLock);
+    }
+    public void EnterUI()
+    {
+        cursorOverUICount++;
+        if (cursorOverUICount > 0)
+        {
+            isCursorOverUI = true;
+        }
+    }
+    public void LeaveUI()
+    {
+        cursorOverUICount--;
+        if (cursorOverUICount <= 0)
+        {
+            isCursorOverUI = false;
+        }
     }
 }
