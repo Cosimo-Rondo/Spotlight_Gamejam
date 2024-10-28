@@ -17,7 +17,11 @@ public class Frame : MonoBehaviour
         page = GetComponent<Page>();
         if (rackCollider == null)
         {
-            rackCollider = transform.Find("Rack").GetComponent<Collider2D>();
+            Transform rack = transform.Find("Rack");
+            if (rack != null)
+            {
+                rackCollider = rack.GetComponent<Collider2D>();
+            }
         }
     }
     bool isActiveLastFrame = false;
@@ -35,6 +39,7 @@ public class Frame : MonoBehaviour
     }
     IEnumerator ActiveRackCollider()
     {
+        if (rackCollider == null) yield break;
         yield return new WaitForSeconds(0.5f);
         rackCollider.enabled = true;
     }

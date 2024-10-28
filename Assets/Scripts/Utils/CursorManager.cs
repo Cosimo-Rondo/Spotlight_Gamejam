@@ -29,7 +29,7 @@ public class CursorManager : MonoBehaviour
     [SerializeField] private Sprite activeZoneCursorSprite;
     [SerializeField] private Sprite rotationZoneCursorSprite;
     public bool isMovingLight = false;
-    public Light currentMovingLight = null;
+    public Light currentActiveLight = null;
     [SerializeField] private Vector3 cursorOffset = Vector3.zero;
 
     private GameObject cursorObject;

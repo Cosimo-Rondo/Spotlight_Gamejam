@@ -105,8 +105,8 @@ public class Light : MonoBehaviour
         angle = Mathf.SmoothDamp(angle, targetAngle, ref angleVelocity, angleSmoothTime);
     }
     private float lastClickTime = 0;
-    private bool isMouseHolding = false;
-    private bool isHovering = false;
+    [SerializeField] private bool isMouseHolding = false;
+    [SerializeField] private bool isHovering = false;
     private Vector2 lastMousePosition;
     private float minDistanceToActiveRotate = 0.1f;
     private bool isMousePosValidLastFrame = false;
@@ -207,11 +207,10 @@ public class Light : MonoBehaviour
                 }
                 else operationType = OperationType.Move;
             }
-            if (Input.GetMouseButton(0) && CursorManager.Instance.currentMovingLight == null)
+            if (Input.GetMouseButton(0))
             {
                 isMouseHolding = true;
                 CursorManager.Instance.isMovingLight = true;
-                CursorManager.Instance.currentMovingLight = this;
                 lastClickTime = Time.time;
                 lastMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             }
@@ -225,7 +224,7 @@ public class Light : MonoBehaviour
             isMouseHolding = false;
             isMousePosValidLastFrame = false;
             CursorManager.Instance.isMovingLight = false;
-            CursorManager.Instance.currentMovingLight = null;
+            CursorManager.Instance.currentActiveLight = null;
         }
         if (isHovering || isMouseHolding)
         {
@@ -265,6 +264,7 @@ public class Light : MonoBehaviour
     }
     public void PutBack(bool forever = false)
     {
+        if (lightIcon == null) return;
         visualElementAnimator.Disappear();
         if (!forever)
         {
@@ -311,12 +311,16 @@ public class Light : MonoBehaviour
     public void OnHighlight()
     {
         //Debug.Log("On Light Highlight");
+        if (CursorManager.Instance.currentActiveLight != null) return;
         isHovering = true;
+        CursorManager.Instance.currentActiveLight = this;
     }
     public void OnUnhighlight()
     {
         //Debug.Log("On Light Unhighlight");
+        if (!isHovering) return;
         isHovering = false;
+        if (!isMouseHolding) CursorManager.Instance.currentActiveLight = null;
     }
     void UpdateSpotlight()
     {
