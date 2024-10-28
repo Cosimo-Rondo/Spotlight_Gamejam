@@ -16,7 +16,7 @@ public class VisualElementAnimator : MonoBehaviour
         public Vector2 moveTarget = Vector2.zero;
 
         public bool useScale = false;
-        public Vector2 scaleTarget = Vector2.one;
+        public Vector3 scaleTarget = Vector3.one;
 
         public float duration = 1f;
         public Ease easeType = Ease.InOutQuad;
