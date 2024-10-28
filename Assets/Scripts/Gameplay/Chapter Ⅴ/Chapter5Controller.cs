@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Chapter5Controller : MonoBehaviour
 {
@@ -14,7 +15,11 @@ public class Chapter5Controller : MonoBehaviour
     int currentDay;
     public LetterDisplayer letterDisplayer;
     public PuzzleLock toDoListLock;
-        // Start is called before the first frame update
+
+    [Header("Camera")]
+    public CameraPoint outsideCameraPoint;
+
+    // Start is called before the first frame update
     void Awake()
     {
         currentDay = -1;
@@ -75,5 +80,9 @@ public class Chapter5Controller : MonoBehaviour
             letterDisplayer.PlayLetterOfName(LetterNames[index]);
         }
     }
-
+    public void LoadLevel(string levelName)
+    {
+        // 使用SceneManager来加载关卡
+        SceneManager.LoadScene(levelName);
+    }
 }
