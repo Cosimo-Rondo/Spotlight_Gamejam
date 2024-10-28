@@ -12,12 +12,18 @@ public class Chapter5Controller : MonoBehaviour
     private int done=0;
     public ListTrigger initList;
     public List<string> LetterNames = new List<string>();
-    int currentDay;
+    int currentDay=-1;
     public LetterDisplayer letterDisplayer;
     public PuzzleLock toDoListLock;
 
     [Header("Camera")]
     public CameraPoint outsideCameraPoint;
+
+    public int CurrentDay{
+        get{
+            return currentDay;
+        }
+    }
 
     // Start is called before the first frame update
     void Awake()
@@ -39,7 +45,6 @@ public class Chapter5Controller : MonoBehaviour
     public void InitTodoList(){
         done=0;
         toDoListLock.Lock();
-        //listDone=false;
         currentDay += 1;
         if (initList != null)
         {
