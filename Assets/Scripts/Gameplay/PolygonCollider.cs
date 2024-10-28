@@ -9,6 +9,7 @@ public class PolygonCollider : MonoBehaviour
     public UnityEvent onFullyContainedByAnotherAreaEvent;
     public UnityEvent onExitAnotherAreaEvent;
     private bool isFullyContainedByAnotherArea = false;
+    public bool allowOverlappedByIrrelevantAreas = false;
     Vector3 lastFramePosition;
     void Awake()
     {

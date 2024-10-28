@@ -29,7 +29,8 @@ public class CursorManager : MonoBehaviour
     [SerializeField] private Sprite activeZoneCursorSprite;
     [SerializeField] private Sprite rotationZoneCursorSprite;
     public bool isMovingLight = false;
-    [SerializeField] private Vector2 cursorOffset = Vector2.zero;
+    public Light currentMovingLight = null;
+    [SerializeField] private Vector3 cursorOffset = Vector3.zero;
 
     private GameObject cursorObject;
     private SpriteRenderer cursorSpriteRenderer;
@@ -60,7 +61,7 @@ public class CursorManager : MonoBehaviour
     private void Update()
     {
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        cursorObject.transform.position = mousePosition + cursorOffset;
+        cursorObject.transform.position = (Vector3)mousePosition + cursorOffset;
     }
 
     public bool isCursorOverUI { get; private set; } = false;

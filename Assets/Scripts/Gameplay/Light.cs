@@ -207,24 +207,33 @@ public class Light : MonoBehaviour
                 }
                 else operationType = OperationType.Move;
             }
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0) && CursorManager.Instance.currentMovingLight == null)
             {
                 isMouseHolding = true;
                 CursorManager.Instance.isMovingLight = true;
+                CursorManager.Instance.currentMovingLight = this;
                 lastClickTime = Time.time;
                 lastMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             }
+            if (Input.GetMouseButtonDown(1))
+            {
+                PutBack();
+            }
+        } 
+        if (Input.GetMouseButtonUp(0) && isMouseHolding)
+        {
+            isMouseHolding = false;
+            isMousePosValidLastFrame = false;
+            CursorManager.Instance.isMovingLight = false;
+            CursorManager.Instance.currentMovingLight = null;
+        }
+        if (isHovering || isMouseHolding)
+        {
             if (Input.mouseScrollDelta.y != 0)
             {
                 targetAngle += Input.mouseScrollDelta.y * 1.5f;
                 targetAngle = Mathf.Clamp(targetAngle, minAngle, maxAngle);
             }
-        } 
-        if (Input.GetMouseButtonUp(0))
-        {
-            isMouseHolding = false;
-            isMousePosValidLastFrame = false;
-            CursorManager.Instance.isMovingLight = false;
         }
         if (isMouseHolding)
         {
@@ -287,7 +296,15 @@ public class Light : MonoBehaviour
             float angleChange = Vector2.SignedAngle(lastDirection, currentDirection);
             float angleChangeNormalized = angleChange * dist / 10f;
             targetRotation += angleChangeNormalized;
-            targetRotation = Mathf.Clamp(targetRotation, minRotation, maxRotation);            
+
+            if (minRotation == -180f && maxRotation == 180f)
+            {
+                //targetRotation = (targetRotation + 360f) % 360f;
+            }
+            else
+            {
+                targetRotation = Mathf.Clamp(targetRotation, minRotation, maxRotation);
+            }
         }
         lastMousePosition = currentMousePosition;
     }
@@ -314,7 +331,7 @@ public class Light : MonoBehaviour
         {
             
         }
-        Debug.Log(gameObject.name + " rotation: " + originalRotation + " + " + rotation);
+        //Debug.Log(gameObject.name + " rotation: " + originalRotation + " + " + rotation);
         transform.rotation = Quaternion.Euler(0, 0, originalRotation + rotation);
         // 计算两条射线的方向，考虑rotation
         Vector2 direction = Quaternion.Euler(0, 0, 0) * Vector2.right;

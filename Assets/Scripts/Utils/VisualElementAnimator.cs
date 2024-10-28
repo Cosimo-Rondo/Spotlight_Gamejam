@@ -68,7 +68,7 @@ public class VisualElementAnimator : MonoBehaviour
             isActive = true;
             if (contentsRoot != null) {
                 contentsRoot.gameObject.SetActive(true);
-                Debug.Log(gameObject.name + " activate contentsRoot");
+                //Debug.Log(gameObject.name + " activate contentsRoot");
             }
             InitFilterAlpha(false);
             if (appearParams.useMove)
@@ -116,7 +116,7 @@ public class VisualElementAnimator : MonoBehaviour
     {
         
         if (isActive) return;
-        Debug.Log(gameObject.name + " Appear");
+        //Debug.Log(gameObject.name + " Appear");
         isActive = true;
         //Debug.Log(gameObject.name + " before kill " + sequence.IsActive());
         DOTween.Kill(this);
