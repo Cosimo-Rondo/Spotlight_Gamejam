@@ -119,7 +119,7 @@ public class Light : MonoBehaviour
         }
         else
         {
-            Interaction_Modern();
+            Interaction_Legacy();//Interaction_Modern();
         }
     }
     public void Interaction_Modern()
@@ -199,13 +199,18 @@ public class Light : MonoBehaviour
                 operationType = OperationType.Move;
             }
             
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(0))
             {
-                operationType = OperationType.Rotate;
+                if (CursorManager.Instance.isCursorOverRotationZoneOfCanvas)
+                {
+                    operationType = OperationType.Rotate;
+                }
+                else operationType = OperationType.Move;
             }
-            if (Input.GetMouseButton(0) || Input.GetMouseButton(1))
+            if (Input.GetMouseButton(0))
             {
                 isMouseHolding = true;
+                CursorManager.Instance.isMovingLight = true;
                 lastClickTime = Time.time;
                 lastMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             }
@@ -215,11 +220,11 @@ public class Light : MonoBehaviour
                 targetAngle = Mathf.Clamp(targetAngle, minAngle, maxAngle);
             }
         } 
-        if ((Input.GetMouseButtonUp(0) && operationType == OperationType.Move)
-        || (Input.GetMouseButtonUp(1) && operationType == OperationType.Rotate))
+        if (Input.GetMouseButtonUp(0))
         {
             isMouseHolding = false;
             isMousePosValidLastFrame = false;
+            CursorManager.Instance.isMovingLight = false;
         }
         if (isMouseHolding)
         {
