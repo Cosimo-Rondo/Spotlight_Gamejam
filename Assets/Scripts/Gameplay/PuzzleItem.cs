@@ -37,10 +37,10 @@ public class PuzzleItem : MonoBehaviour
         bool isHighlighted = selectable.IsHighlighted();
         if (isHighlighted && Input.GetMouseButton(0))
         {
-            if (!isDragging && CursorManager.Instance.currentPuzzleItem == null)
+            if (!isDragging && BubbleCursor.Instance.currentPuzzleItem == null)
             {
                 isDragging = true;
-                CursorManager.Instance.SetCurrentPuzzleItem(GetComponent<PuzzleItem>());
+                BubbleCursor.Instance.SetCurrentPuzzleItem(GetComponent<PuzzleItem>());
             }
         }
         else if (isDragging && !Input.GetMouseButton(0))
@@ -59,7 +59,7 @@ public class PuzzleItem : MonoBehaviour
     }
     void OnRelease()
     {
-        List<PuzzleLock> targetAreas = CursorManager.Instance.currentItemTargetAreas;
+        List<PuzzleLock> targetAreas = BubbleCursor.Instance.currentItemTargetAreas;
         bool accepted = false;
         foreach (PuzzleLock targetArea in targetAreas)
         {
@@ -80,7 +80,7 @@ public class PuzzleItem : MonoBehaviour
         }
         transform.localPosition = originalLocalPos;
         isDragging = false;
-        CursorManager.Instance.SetCurrentPuzzleItem(null);
+        BubbleCursor.Instance.SetCurrentPuzzleItem(null);
     }
     public Vector3 GetInitialLocalPosition()
     {

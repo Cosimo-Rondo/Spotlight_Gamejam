@@ -42,7 +42,7 @@ public class Chapter3Controller : MonoBehaviour
     }
     public void NextChapter()
     {
-        SceneSwitcher.Instance.SwitchScene("Chapter IV - II");
+        SceneSwitcher.Instance.SwitchScene("Chapter IV - II - opening");
     }
     public void Umbrella()
     {

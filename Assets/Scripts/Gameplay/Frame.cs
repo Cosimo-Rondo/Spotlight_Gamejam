@@ -27,7 +27,7 @@ public class Frame : MonoBehaviour
     bool isActiveLastFrame = false;
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !CursorManager.Instance.isCursorOverActiveZoneOfCanvas)
+        if (Input.GetMouseButtonDown(0) && !BubbleCursor.IsInActiveArea)
         {
             if (page != null && isActiveLastFrame)
             {

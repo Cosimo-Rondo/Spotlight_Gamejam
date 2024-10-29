@@ -42,7 +42,7 @@ public class Light : MonoBehaviour
 
     public VisualElementAnimator visualElementAnimator;
     public VisualElementAnimator lightIcon;
-
+    static Light currentOperatingLight = null;
     void Awake()
     {
         // 创建一个名为"mesh"的子物体
@@ -89,6 +89,7 @@ public class Light : MonoBehaviour
             visualElementAnimator = GetComponentInParent<VisualElementAnimator>();
         }
         originalRotation = transform.rotation.eulerAngles.z;
+        interactionArea = GetComponentInChildren<Selectable>();
     }
     void Start()
     {
@@ -112,18 +113,12 @@ public class Light : MonoBehaviour
     private float minDistanceToActiveRotate = 0.1f;
     private bool isMousePosValidLastFrame = false;
     public bool useLegacyInteraction = false;
+    public Selectable interactionArea;
     void CheckPlayerInteraction()
     {
-        if (useLegacyInteraction)
-        {
-            Interaction_Legacy();
-        }
-        else
-        {
-            Interaction_Legacy();//Interaction_Modern();
-        }
+        Interaction_Modern();
     }
-    public void Interaction_Modern()
+    public void Interaction_Legacy()
     {
         if (isHovering)
         {
@@ -185,47 +180,55 @@ public class Light : MonoBehaviour
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         railSlider.MoveAlongRail(mousePosition - lastMousePosition);
     }
-    public void Interaction_Legacy()
+    public void Interaction_Modern()
     {
-        if (isHovering)
+        if (interactionArea.IsHighlighted())
         {
-            if (Input.GetMouseButtonDown(0))
+            if (currentOperatingLight != null && currentOperatingLight != this) isHovering = false;
+            else isHovering = true;
+            if (currentOperatingLight == null)
             {
-                //Debug.Log("time elapsed: " + (Time.time - lastClickTime));
-                if (Time.time - lastClickTime < 0.4f)
-                {
-                    isLightOn = !isLightOn;
-                    lastClickTime = -1;
-                }
-                operationType = OperationType.Move;
+                currentOperatingLight = this;
             }
-            
-            if (Input.GetMouseButtonDown(0))
+        }
+        else isHovering = false;
+        if (isHovering)
+        {   
+            if (!isMouseHolding)
             {
-                if (CursorManager.Instance.isCursorOverRotationZoneOfCanvas)
+                if (BubbleCursor.IsInRotateArea)
                 {
                     operationType = OperationType.Rotate;
+                    BubbleCursor.AddItemToRotate(gameObject);
+                    BubbleCursor.RemoveItemToDrag(gameObject);
                 }
-                else operationType = OperationType.Move;
+                else {
+                    operationType = OperationType.Move;
+                    BubbleCursor.RemoveItemToRotate(gameObject);
+                    BubbleCursor.AddItemToDrag(gameObject);
+                }
+                if (Input.GetMouseButton(0))
+                {
+                    isMouseHolding = true;
+                    lastClickTime = Time.time;
+                    lastMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                }
+                if (Input.GetMouseButtonDown(1) && lightIcon != null)
+                {
+                    isLightOn = !isLightOn;
+                }
             }
-            if (Input.GetMouseButton(0))
-            {
-                isMouseHolding = true;
-                CursorManager.Instance.isMovingLight = true;
-                lastClickTime = Time.time;
-                lastMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        }
+        else {
+            if (!isMouseHolding) {
+                BubbleCursor.RemoveItemToDrag(gameObject);
+                BubbleCursor.RemoveItemToRotate(gameObject);
             }
-            if (Input.GetMouseButtonDown(1) && lightIcon != null)
-            {
-                PutBack();
-            }
-        } 
+        }
         if (Input.GetMouseButtonUp(0) && isMouseHolding)
         {
             isMouseHolding = false;
             isMousePosValidLastFrame = false;
-            CursorManager.Instance.isMovingLight = false;
-            CursorManager.Instance.currentActiveLight = null;
         }
         if (isHovering || isMouseHolding)
         {
@@ -251,6 +254,14 @@ public class Light : MonoBehaviour
                 lastMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             }
         }
+        if (currentOperatingLight == this)
+        {
+            if (!isHovering && !isMouseHolding)
+            {
+                currentOperatingLight = null;
+
+            }
+        }
     }
     public bool IsLightOn()
     {
@@ -265,15 +276,10 @@ public class Light : MonoBehaviour
     }
     public void PutBack(bool forever = false)
     {
-        if (CursorManager.Instance.currentActiveLight == this)
-        {
-            CursorManager.Instance.currentActiveLight = null;
-            CursorManager.Instance.isMovingLight = false;
-        }
-        if (isHovering)
-        {
-            isHovering = false;
-        }
+        isHovering = false;
+        isMouseHolding = false;
+        if (currentOperatingLight == this) currentOperatingLight = null;
+
         visualElementAnimator.Disappear();
         if (!forever)
         {
@@ -282,6 +288,12 @@ public class Light : MonoBehaviour
                 lightIcon.Appear();
             }
         }
+    }
+    void OnDisable()
+    {
+        if (currentOperatingLight == this) currentOperatingLight = null;
+        BubbleCursor.RemoveItemToDrag(gameObject);
+        BubbleCursor.RemoveItemToRotate(gameObject);
     }
     public void CheckRotateOperation_Legacy()
     {
@@ -319,17 +331,11 @@ public class Light : MonoBehaviour
     }
     public void OnHighlight()
     {
-        //Debug.Log("On Light Highlight");
-        if (CursorManager.Instance.currentActiveLight != null) return;
-        isHovering = true;
-        CursorManager.Instance.currentActiveLight = this;
+
     }
     public void OnUnhighlight()
     {
-        //Debug.Log("On Light Unhighlight");
-        if (!isHovering) return;
-        isHovering = false;
-        if (!isMouseHolding) CursorManager.Instance.currentActiveLight = null;
+
     }
     void UpdateSpotlight()
     {

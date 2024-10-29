@@ -1,3 +1,4 @@
+/*
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
@@ -19,12 +20,8 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     public Transform highlightTarget;
     public Collider2D mouseDetectArea;
     public bool isUIElement = false;
-    public bool isDragArea = false;
     public bool isDraggable = false;
-
-    public bool isActiveArea = false;
-    public bool isRotateArea = false;
-    public bool isTransparentArea = true; //不挡鼠标射线，和别的区域之间没有任何影响
+    public bool isActiveZone = false;
     //public bool isActiveZoneForCanvas = false;
 
     public enum SelectType
@@ -73,16 +70,6 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         originalPos = transform.position;
     }
 
-    protected virtual void OnEnable()
-    {
-        Unhighlight();
-        BubbleCursor.AddSelectable(this);
-    }
-    protected virtual void OnDisable()
-    {
-        Unhighlight();
-        BubbleCursor.RemoveSelectable(this);
-    }
     protected virtual void Start()
     {
         if (spriteRenderer == null)
@@ -130,10 +117,14 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         }
 
     }
+    protected virtual void OnEnable()
+    {
+        Unhighlight();
+    }
     bool isDragging = false;
     protected virtual void Update()
     {
-        if (!isUIElement && BubbleCursor.IsOverUI) return;
+        if (!isUIElement && CursorManager.Instance.isCursorOverUI) return;
         MouseHitCheck();
         if (selectType == SelectType.MouseClick)
         {
@@ -191,12 +182,15 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         //Debug.Log("Highlight");
         if (isHighlighted) return;
-        if (!isTransparentArea)
+        if (isUIElement) CursorManager.Instance.EnterUI();
+
+        //if (!IsPageActive()) return;
+        
+        if (isActiveZoneForCanvas)
         {
-            if (BubbleCursor.Instance.currentHighlightArea == this) return;
-            if (BubbleCursor.Instance.currentHighlightArea != null) return;
-            BubbleCursor.Instance.currentHighlightArea = this;
+            CursorManager.Instance.isCursorOverActiveZoneOfCanvas = true;
         }
+        
         isHighlighted = true;
         if (spriteRenderer != null || image != null)
         {
@@ -261,8 +255,14 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     public virtual void Unhighlight()
     {
         if (!isHighlighted) return;
+        if (isUIElement) CursorManager.Instance.LeaveUI();
+        /*
+        if (isActiveZoneForCanvas)
+        {
+            CursorManager.Instance.isCursorOverActiveZoneOfCanvas = false;
+        }
+        
         isHighlighted = false;
-        if (!isTransparentArea) BubbleCursor.Instance.currentHighlightArea = null;
         if (spriteRenderer != null || image != null)
         {
             switch (highlightType)
@@ -314,7 +314,7 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     private void CustomizedOnMouseEnter()
     {
-        if (!isUIElement && BubbleCursor.IsOverUI) return;
+        if (!isUIElement && CursorManager.Instance.isCursorOverUI) return;
         if (selectType == SelectType.MouseClick || selectType == SelectType.MouseHold)
         {
             Highlight();
@@ -323,7 +323,7 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     private void CustomizedOnMouseExit()
     {
-        if (!isUIElement && BubbleCursor.IsOverUI) return;
+        if (!isUIElement && CursorManager.Instance.isCursorOverUI) return;
         if (selectType == SelectType.MouseClick || selectType == SelectType.MouseHold)
         {
             Unhighlight();
@@ -332,7 +332,7 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (!isUIElement && BubbleCursor.IsOverUI) return;
+        if (!isUIElement && CursorManager.Instance.isCursorOverUI) return;
         if (selectType == SelectType.MouseClick || selectType == SelectType.MouseHold)
         {
             Highlight();
@@ -341,7 +341,7 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (!isUIElement && BubbleCursor.IsOverUI) return;
+        if (!isUIElement && CursorManager.Instance.isCursorOverUI) return;
         if (selectType == SelectType.MouseClick || selectType == SelectType.MouseHold)
         {
             Unhighlight();
@@ -352,3 +352,4 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         return isHighlighted;
     }
 }
+*/

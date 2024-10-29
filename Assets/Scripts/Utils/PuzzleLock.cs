@@ -59,11 +59,11 @@ public class PuzzleLock : MonoBehaviour
                 if (detectArea.IsHighlighted())
                 {
                     Debug.Log("mouse enter target area");
-                    CursorManager.Instance.AddCurrentItemTargetArea(this);
+                    BubbleCursor.Instance.AddCurrentItemTargetArea(this);
                 }
                 else if (!detectArea.IsHighlighted() && isHighlightedLastFrame)
                 {
-                    CursorManager.Instance.RemoveCurrentItemTargetArea(this);
+                    BubbleCursor.Instance.RemoveCurrentItemTargetArea(this);
                 }
                 isHighlightedLastFrame = detectArea.IsHighlighted();
             }
@@ -79,7 +79,7 @@ public class PuzzleLock : MonoBehaviour
         onUnlocked.Invoke();
         if (lockType == LockType.Item)
         {
-            CursorManager.Instance.RemoveCurrentItemTargetArea(this);
+            BubbleCursor.Instance.RemoveCurrentItemTargetArea(this);
         }
         return true;
     }

@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -177,3 +177,4 @@ public class CursorManager : MonoBehaviour
         cursorImage.sprite = defaultCursorSprite;
     }
 }
+*/
