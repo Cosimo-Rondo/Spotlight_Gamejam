@@ -20,4 +20,8 @@ public class SingletonProxy : MonoBehaviour
     {
         SceneSwitcher.Instance.SwitchScene(name);
     }
+    public void StopAudio(string name)
+    {
+        AudioManager.StopAudio(name);
+    }
 }
