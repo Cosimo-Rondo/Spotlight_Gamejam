@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShowPaint : MonoBehaviour
 {
     public bool canShow=false;
-    public bool show_over = false;
+    private bool is_show = false;
     public GameObject line;
     private float duration = 1;
     // Start is called before the first frame update
@@ -20,9 +20,10 @@ public class ShowPaint : MonoBehaviour
         
     }
     public void Show(){
-        if (canShow)
+        if (canShow && !is_show)
         {
             gameObject.SetActive(true);
+            is_show = true;
             StartCoroutine(SmoothShowPieces());
         }
     }
@@ -45,6 +46,5 @@ public class ShowPaint : MonoBehaviour
             piece_mat.color = Color.Lerp(new Color(1, 1, 1, 0), new Color(1, 1, 1, 1), t);
             yield return null;
         }
-        show_over = true;
     }
 }
