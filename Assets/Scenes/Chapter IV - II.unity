@@ -360,7 +360,7 @@ MonoBehaviour:
   onHighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverActiveZoneOfCanvas
         m_Mode: 6
@@ -375,7 +375,7 @@ MonoBehaviour:
   onUnhighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverActiveZoneOfCanvas
         m_Mode: 6
@@ -408,6 +408,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 1
   selectType: 1
   highlightType: 4
@@ -754,6 +759,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -1038,6 +1048,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -1248,6 +1263,7 @@ MonoBehaviour:
   isMouseHolding: 0
   isHovering: 0
   useLegacyInteraction: 0
+  interactionArea: {fileID: 0}
 --- !u!114 &78638219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1802,6 +1818,7 @@ MonoBehaviour:
   isMouseHolding: 0
   isHovering: 0
   useLegacyInteraction: 0
+  interactionArea: {fileID: 0}
 --- !u!114 &117770648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1868,6 +1885,7 @@ MonoBehaviour:
   isMouseHolding: 0
   isHovering: 0
   useLegacyInteraction: 0
+  interactionArea: {fileID: 0}
 --- !u!114 &118624501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1956,7 +1974,7 @@ MonoBehaviour:
   onHighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverActiveZoneOfCanvas
         m_Mode: 6
@@ -1971,7 +1989,7 @@ MonoBehaviour:
   onUnhighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverActiveZoneOfCanvas
         m_Mode: 6
@@ -1992,6 +2010,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 0
@@ -2198,6 +2221,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -2457,6 +2485,7 @@ MonoBehaviour:
   isMouseHolding: 0
   isHovering: 0
   useLegacyInteraction: 0
+  interactionArea: {fileID: 0}
 --- !u!114 &180858570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2724,6 +2753,7 @@ MonoBehaviour:
   isMouseHolding: 0
   isHovering: 0
   useLegacyInteraction: 0
+  interactionArea: {fileID: 0}
 --- !u!114 &226543056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2889,6 +2919,7 @@ MonoBehaviour:
   isMouseHolding: 0
   isHovering: 0
   useLegacyInteraction: 0
+  interactionArea: {fileID: 0}
 --- !u!114 &242035258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4115,6 +4146,7 @@ MonoBehaviour:
   isMouseHolding: 0
   isHovering: 0
   useLegacyInteraction: 0
+  interactionArea: {fileID: 0}
 --- !u!114 &300124775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4256,6 +4288,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -5516,6 +5553,7 @@ MonoBehaviour:
   isMouseHolding: 0
   isHovering: 0
   useLegacyInteraction: 0
+  interactionArea: {fileID: 0}
 --- !u!114 &427291266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5897,6 +5935,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -6187,6 +6230,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -6429,6 +6477,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -6780,6 +6833,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -7730,7 +7788,7 @@ MonoBehaviour:
   onHighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverRotationZoneOfCanvas
         m_Mode: 6
@@ -7745,7 +7803,7 @@ MonoBehaviour:
   onUnhighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverRotationZoneOfCanvas
         m_Mode: 6
@@ -7766,6 +7824,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 0
@@ -8152,6 +8215,7 @@ MonoBehaviour:
   isMouseHolding: 0
   isHovering: 0
   useLegacyInteraction: 0
+  interactionArea: {fileID: 0}
 --- !u!114 &629360022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8318,6 +8382,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -8674,6 +8743,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -8784,7 +8858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9032,7 +9106,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &778876446
 GameObject:
@@ -9177,62 +9251,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791172018}
   m_CullTransparentMesh: 1
---- !u!1 &791808960
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 791808962}
-  - component: {fileID: 791808961}
-  m_Layer: 0
-  m_Name: CursorManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &791808961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 791808960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40bb89208ecf6ca48a9de8cdf8c81336, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentPuzzleItem: {fileID: 0}
-  currentItemTargetAreas: []
-  defaultCursorSprite: {fileID: 21300000, guid: 8711bd568c9334c4d880f8344f21206a, type: 3}
-  uiCursorSprite: {fileID: 0}
-  activeZoneCursorSprite: {fileID: 0}
-  rotationZoneCursorSprite: {fileID: 21300000, guid: 6731a6b0a85e5c9428bbb3534e8bf8b9, type: 3}
-  isMovingLight: 0
-  currentActiveLight: {fileID: 0}
-  cursorOffset: {x: 0, y: 0, z: 0}
-  cursorSize: {x: 32, y: 32}
-  isCursorOverActiveZoneOfCanvas: 0
-  isCursorOverRotationZoneOfCanvas: 0
---- !u!4 &791808962
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 791808960}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.771236, y: -1.3184111, z: -0.116906025}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &798038288
 GameObject:
   m_ObjectHideFlags: 0
@@ -9340,6 +9358,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -9917,6 +9940,7 @@ MonoBehaviour:
   isMouseHolding: 0
   isHovering: 0
   useLegacyInteraction: 0
+  interactionArea: {fileID: 0}
 --- !u!114 &874988717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10358,6 +10382,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -10504,7 +10533,7 @@ MonoBehaviour:
   onHighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverActiveZoneOfCanvas
         m_Mode: 6
@@ -10519,7 +10548,7 @@ MonoBehaviour:
   onUnhighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverActiveZoneOfCanvas
         m_Mode: 6
@@ -10540,6 +10569,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 0
@@ -11127,6 +11161,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -11226,7 +11265,7 @@ MonoBehaviour:
   onHighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverActiveZoneOfCanvas
         m_Mode: 6
@@ -11241,7 +11280,7 @@ MonoBehaviour:
   onUnhighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverActiveZoneOfCanvas
         m_Mode: 6
@@ -11262,6 +11301,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 0
@@ -11744,6 +11788,7 @@ MonoBehaviour:
   isMouseHolding: 0
   isHovering: 0
   useLegacyInteraction: 0
+  interactionArea: {fileID: 0}
 --- !u!114 &960421083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11842,6 +11887,7 @@ MonoBehaviour:
   isMouseHolding: 0
   isHovering: 0
   useLegacyInteraction: 0
+  interactionArea: {fileID: 0}
 --- !u!114 &961522210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12782,6 +12828,7 @@ MonoBehaviour:
   isMouseHolding: 0
   isHovering: 0
   useLegacyInteraction: 0
+  interactionArea: {fileID: 0}
 --- !u!114 &1006177686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12933,7 +12980,7 @@ MonoBehaviour:
   onHighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverRotationZoneOfCanvas
         m_Mode: 6
@@ -12948,7 +12995,7 @@ MonoBehaviour:
   onUnhighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverRotationZoneOfCanvas
         m_Mode: 6
@@ -12969,6 +13016,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 0
@@ -13127,7 +13179,7 @@ MonoBehaviour:
   onHighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverRotationZoneOfCanvas
         m_Mode: 6
@@ -13142,7 +13194,7 @@ MonoBehaviour:
   onUnhighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverRotationZoneOfCanvas
         m_Mode: 6
@@ -13163,6 +13215,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 0
@@ -14029,6 +14086,7 @@ MonoBehaviour:
   isMouseHolding: 0
   isHovering: 0
   useLegacyInteraction: 0
+  interactionArea: {fileID: 0}
 --- !u!114 &1094534668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14117,7 +14175,7 @@ MonoBehaviour:
   onHighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverRotationZoneOfCanvas
         m_Mode: 6
@@ -14132,7 +14190,7 @@ MonoBehaviour:
   onUnhighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverRotationZoneOfCanvas
         m_Mode: 6
@@ -14153,6 +14211,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 0
@@ -14981,7 +15044,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1193836481
 GameObject:
@@ -15570,6 +15633,7 @@ MonoBehaviour:
   isMouseHolding: 0
   isHovering: 0
   useLegacyInteraction: 0
+  interactionArea: {fileID: 0}
 --- !u!114 &1258643148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16039,6 +16103,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -16152,7 +16221,7 @@ MonoBehaviour:
   onHighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverRotationZoneOfCanvas
         m_Mode: 6
@@ -16167,7 +16236,7 @@ MonoBehaviour:
   onUnhighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverRotationZoneOfCanvas
         m_Mode: 6
@@ -16188,6 +16257,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 0
@@ -16590,6 +16664,7 @@ MonoBehaviour:
   isMouseHolding: 0
   isHovering: 0
   useLegacyInteraction: 0
+  interactionArea: {fileID: 0}
 --- !u!114 &1327594225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16956,7 +17031,7 @@ MonoBehaviour:
   onHighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverRotationZoneOfCanvas
         m_Mode: 6
@@ -16971,7 +17046,7 @@ MonoBehaviour:
   onUnhighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverRotationZoneOfCanvas
         m_Mode: 6
@@ -16992,6 +17067,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 0
@@ -17453,6 +17533,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -17606,7 +17691,7 @@ MonoBehaviour:
   onHighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverActiveZoneOfCanvas
         m_Mode: 6
@@ -17621,7 +17706,7 @@ MonoBehaviour:
   onUnhighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverActiveZoneOfCanvas
         m_Mode: 6
@@ -17654,6 +17739,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 1
   selectType: 1
   highlightType: 4
@@ -18558,6 +18648,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -19030,6 +19125,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 1
@@ -19217,6 +19317,7 @@ MonoBehaviour:
   isMouseHolding: 0
   isHovering: 0
   useLegacyInteraction: 0
+  interactionArea: {fileID: 0}
 --- !u!114 &1501882405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20194,7 +20295,7 @@ MonoBehaviour:
   onHighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverActiveZoneOfCanvas
         m_Mode: 6
@@ -20209,7 +20310,7 @@ MonoBehaviour:
   onUnhighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverActiveZoneOfCanvas
         m_Mode: 6
@@ -20230,6 +20331,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 0
@@ -20749,6 +20855,7 @@ MonoBehaviour:
   isMouseHolding: 0
   isHovering: 0
   useLegacyInteraction: 0
+  interactionArea: {fileID: 0}
 --- !u!114 &1612362725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21281,7 +21388,7 @@ MonoBehaviour:
   onHighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverActiveZoneOfCanvas
         m_Mode: 6
@@ -21296,7 +21403,7 @@ MonoBehaviour:
   onUnhighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverActiveZoneOfCanvas
         m_Mode: 6
@@ -21317,6 +21424,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 0
@@ -21457,6 +21569,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -22081,6 +22198,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -22438,6 +22560,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -22604,6 +22731,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -22815,6 +22947,7 @@ MonoBehaviour:
   isMouseHolding: 0
   isHovering: 0
   useLegacyInteraction: 0
+  interactionArea: {fileID: 0}
 --- !u!114 &1701433681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23976,7 +24109,7 @@ MonoBehaviour:
   onHighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverRotationZoneOfCanvas
         m_Mode: 6
@@ -23991,7 +24124,7 @@ MonoBehaviour:
   onUnhighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverRotationZoneOfCanvas
         m_Mode: 6
@@ -24012,6 +24145,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 0
@@ -24908,6 +25046,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -24967,6 +25110,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1908448763
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6310610180163858580, guid: f4c0c1bf6e8720c44a709c82424e17d4, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310610180163858580, guid: f4c0c1bf6e8720c44a709c82424e17d4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.67182076
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310610180163858580, guid: f4c0c1bf6e8720c44a709c82424e17d4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.16422457
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310610180163858580, guid: f4c0c1bf6e8720c44a709c82424e17d4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.2366541
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310610180163858580, guid: f4c0c1bf6e8720c44a709c82424e17d4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310610180163858580, guid: f4c0c1bf6e8720c44a709c82424e17d4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310610180163858580, guid: f4c0c1bf6e8720c44a709c82424e17d4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310610180163858580, guid: f4c0c1bf6e8720c44a709c82424e17d4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310610180163858580, guid: f4c0c1bf6e8720c44a709c82424e17d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310610180163858580, guid: f4c0c1bf6e8720c44a709c82424e17d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310610180163858580, guid: f4c0c1bf6e8720c44a709c82424e17d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310610180163858602, guid: f4c0c1bf6e8720c44a709c82424e17d4, type: 3}
+      propertyPath: m_Name
+      value: CursorManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f4c0c1bf6e8720c44a709c82424e17d4, type: 3}
 --- !u!1 &1913263694
 GameObject:
   m_ObjectHideFlags: 0
@@ -25114,7 +25314,7 @@ MonoBehaviour:
   onHighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverActiveZoneOfCanvas
         m_Mode: 6
@@ -25129,7 +25329,7 @@ MonoBehaviour:
   onUnhighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverActiveZoneOfCanvas
         m_Mode: 6
@@ -25150,6 +25350,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 0
@@ -25277,6 +25482,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -25595,7 +25805,7 @@ MonoBehaviour:
   onHighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverActiveZoneOfCanvas
         m_Mode: 6
@@ -25610,7 +25820,7 @@ MonoBehaviour:
   onUnhighlightEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791808961}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: SetCursorOverActiveZoneOfCanvas
         m_Mode: 6
@@ -25631,6 +25841,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 0
@@ -25771,6 +25986,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -26418,6 +26638,7 @@ MonoBehaviour:
   isMouseHolding: 0
   isHovering: 0
   useLegacyInteraction: 0
+  interactionArea: {fileID: 0}
 --- !u!114 &2045077719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26704,6 +26925,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -27891,6 +28117,7 @@ MonoBehaviour:
   isMouseHolding: 0
   isHovering: 0
   useLegacyInteraction: 0
+  interactionArea: {fileID: 0}
 --- !u!4 &7465411566715829356
 Transform:
   m_ObjectHideFlags: 0
@@ -27998,6 +28225,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
