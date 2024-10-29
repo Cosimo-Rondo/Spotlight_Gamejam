@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BubbleCursor : MonoBehaviour
 {
@@ -46,6 +47,7 @@ public class BubbleCursor : MonoBehaviour
         if (_instance != null && _instance != this)
         {
             Destroy(this.gameObject);
+            return;
         }
         else
         {
@@ -53,14 +55,18 @@ public class BubbleCursor : MonoBehaviour
         }
         DontDestroyOnLoad(this.gameObject);
         Initialize();
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
+
     private void OnDestroy()
     {
         if (_instance == this)
         {
             _instance = null;
         }
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
+
     void Initialize()
     {
         InitializeCursorSprite();
@@ -87,6 +93,17 @@ public class BubbleCursor : MonoBehaviour
         cursorImage.raycastTarget = false;
         
         Cursor.visible = false;
+        DontDestroyOnLoad(canvasObj);
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // 确保在场景加载后光标对象仍然存在
+        if (cursorObject == null || cursorImage == null)
+        {
+            InitializeCursorSprite();
+            SetCursor(defaultCursor);
+        }
     }
 
     private void SetCursor(CursorInfo cursorInfo)
