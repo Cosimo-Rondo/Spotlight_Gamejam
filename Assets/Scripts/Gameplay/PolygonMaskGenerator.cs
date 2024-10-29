@@ -65,7 +65,7 @@ public class PolygonMaskGenerator : MonoBehaviour
             if (!light.IsLightOn() || light.shape == null) return;
             polygons.Add(light.shape);
         }
-        polygons.Add(painting.borderShape);
+        if (painting.borderShape != null) polygons.Add(painting.borderShape);
         List<Vector2> intersectionVertices = Polygon.CalculateIntersection(polygons);
         shape = new Polygon(intersectionVertices);
 

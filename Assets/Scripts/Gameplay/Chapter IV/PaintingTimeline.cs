@@ -7,6 +7,7 @@ using DG.Tweening;
 public class PaintingTimeline : MonoBehaviour
 {
     public Color inActiveColor = Color.gray;
+    public Color highlightColor = Color.yellow; // Ìí¼Ó¸ßÁÁÑÕÉ«
     public List<Color> iconColors = new List<Color>();
     public List<Frame> frames = new List<Frame>();
     public List<Image> icons = new List<Image>();
@@ -15,7 +16,8 @@ public class PaintingTimeline : MonoBehaviour
     private int frameCount;
     private int currentIndex = -1;
     private Vector3 originalIconScale;
-    public float switchInterval = 10f; // ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»Îªï¿½ï¿½
+    public float switchInterval = 10f;
+    public float iconColorFadeDuration = 0.2f; // Ìí¼ÓÑÕÉ«½¥±ä³ÖÐøÊ±¼ä
 
     public Light lastFrameLightA, lastFrameLightB, lastFrameLightC;
     public ListTrigger lastFrameCompleteTrigger;
@@ -63,14 +65,24 @@ public class PaintingTimeline : MonoBehaviour
         {
             icons[currentIndex].transform.DOScale(originalIconScale, 0.3f);
             if (frames[currentIndex] != null) frames[currentIndex].GetComponent<VisualElementAnimator>().Disappear();
+            // Èç¹ûÇ°Ò»¸öframeÎ´Íê³É£¬»Ö¸´Îª·Ç¼¤»îÑÕÉ«
+            if (!isFrameCompleted[currentIndex])
+            {
+                icons[currentIndex].DOColor(inActiveColor, iconColorFadeDuration);
+            }
         }
 
         currentIndex = index;
 
         if (currentIndex >= 0 && currentIndex < icons.Count)
         {
-            icons[currentIndex].transform.DOScale(originalIconScale * 1.2f, 0.3f);
+            icons[currentIndex].transform.DOScale(originalIconScale * 1.4f, 0.3f);
             if (frames[currentIndex] != null) frames[currentIndex].GetComponent<VisualElementAnimator>().Appear();
+            // Èç¹ûµ±Ç°frameÎ´Íê³É£¬ÉèÖÃÎª¸ßÁÁÑÕÉ«
+            if (!isFrameCompleted[currentIndex])
+            {
+                icons[currentIndex].DOColor(highlightColor, iconColorFadeDuration);
+            }
         }
     }
 
@@ -113,7 +125,7 @@ public class PaintingTimeline : MonoBehaviour
     public void SetFrameActive(int index)
     {
         isFrameCompleted[index] = true;
-        icons[index].color = iconColors[index];
+        icons[index].DOColor(iconColors[index], iconColorFadeDuration);
         activeFrameCount++;
         if (activeFrameCount == 6) NextScene();
     }

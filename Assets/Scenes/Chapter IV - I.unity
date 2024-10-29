@@ -381,6 +381,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 1
   selectType: 1
   highlightType: 4
@@ -563,6 +568,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -1368,6 +1378,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 0
@@ -2166,6 +2181,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -2924,6 +2944,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -3882,6 +3907,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -4075,6 +4105,7 @@ MonoBehaviour:
   isMouseHolding: 0
   isHovering: 0
   useLegacyInteraction: 0
+  interactionArea: {fileID: 0}
 --- !u!114 &961522210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4996,6 +5027,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 0
@@ -5536,6 +5572,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 7465411566077211125}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -5677,6 +5718,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 1
   selectType: 1
   highlightType: 4
@@ -5939,6 +5985,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -6263,6 +6314,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 1
@@ -6988,6 +7044,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -7462,6 +7523,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 0
@@ -8672,6 +8738,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 0
@@ -8799,6 +8870,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -9233,6 +9309,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 1
   selectType: 0
   highlightType: 4
@@ -9471,12 +9552,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cb6bb570c3738914d81e10d27c7f4628, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8d32b93a213759742ad5c37adef84a55, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 32.71953, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -9948,6 +10029,7 @@ MonoBehaviour:
   isMouseHolding: 0
   isHovering: 0
   useLegacyInteraction: 0
+  interactionArea: {fileID: 0}
 --- !u!4 &7465411566715829356
 Transform:
   m_ObjectHideFlags: 0
@@ -10055,6 +10137,11 @@ MonoBehaviour:
   highlightTarget: {fileID: 0}
   mouseDetectArea: {fileID: 0}
   isUIElement: 0
+  isDragArea: 0
+  isDraggable: 0
+  isActiveArea: 0
+  isRotateArea: 0
+  isTransparentArea: 1
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4

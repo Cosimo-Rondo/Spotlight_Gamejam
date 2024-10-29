@@ -213,7 +213,7 @@ public class Light : MonoBehaviour
                     lastClickTime = Time.time;
                     lastMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 }
-                if (Input.GetMouseButtonDown(1) && lightIcon != null)
+                if (Input.GetMouseButtonDown(1))
                 {
                     isLightOn = !isLightOn;
                 }
