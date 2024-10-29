@@ -9215,7 +9215,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a297090c736527a4ab8ac67d7cb2ad53, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 23d7d63dc3f9fba4389d4f36fc0d4a1b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13340,6 +13340,7 @@ MonoBehaviour:
   blackImage: {fileID: 83397037}
   endText: {fileID: 1442434682}
   clickTime: 8
+  duration: 8
   listTrigger: {fileID: 2010718692}
 --- !u!114 &2010718690
 MonoBehaviour:

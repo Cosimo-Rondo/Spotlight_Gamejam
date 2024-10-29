@@ -15,6 +15,7 @@ public class CompletePaint : MonoBehaviour
     public Image blackImage;
     public Image endText; 
     public int clickTime=8;
+    public float duration = 5;
     private Color targetColor = new Color(0f, 0f, 0f, 0f); // 初始透明黑色
     private float darkenRate = 0.125f; // 每次点击变暗的程度
     public ListTrigger listTrigger;
@@ -73,14 +74,13 @@ public class CompletePaint : MonoBehaviour
 
     IEnumerator SetEndText(){
         // 渐变持续的时间
-        float duration = 5.0f;
         float elapsed = 0.0f;
 
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
             float t = elapsed / duration;
-            endText.color = Color.Lerp(endText.color , new Color(1.0f,1.0f,1.0f,1.0f), t);
+            endText.color = Color.Lerp(new Color(1, 1, 1, 0), new Color(1.0f,1.0f,1.0f,1.0f), t);
             
 
             if(endText.color.a>0.95f){
