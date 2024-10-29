@@ -53,8 +53,8 @@ MonoBehaviour:
   - sceneName: Chapter V - I
     bgmName: "BGM_3_1_\u70B9\u7F00\u82B1\u56ED"
   sounds:
-  - clip: {fileID: 8300000, guid: da17b5dc8a251b04a84df796a7bb6f84, type: 3}
-    outputGroup: {fileID: -506024407457346661, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
+  - clip: {fileID: 8300000, guid: 0175ea2529a175c4281b53f6d4212af4, type: 3}
+    outputGroup: {fileID: 2631526386466028730, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
     volume: 1
     playOnAwake: 0
     loop: 1

@@ -5,7 +5,7 @@ using UnityEngine.Audio;
 
 public class AudioSettingManager : MonoBehaviour
 {
-    [Header("ÒôÆµ»ìÏìÆ÷")]
+    [Header("?æ¾å§£ï¿½?å´šï¿½")]
     public AudioMixer mixer;
 
     public void SetBGMVolume(float value)
