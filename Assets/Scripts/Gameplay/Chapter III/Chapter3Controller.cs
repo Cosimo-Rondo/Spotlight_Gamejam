@@ -15,6 +15,8 @@ public class Chapter3Controller : MonoBehaviour
     }
     void Start()
     {
+        AudioManager.PlayAudio("BGM_3_2_��һ��������");
+        
     }
 
     // Update is called once per frame

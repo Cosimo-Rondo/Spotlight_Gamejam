@@ -101,6 +101,46 @@ MonoBehaviour:
     volume: 1
     playOnAwake: 0
     loop: 1
+  - clip: {fileID: 8300000, guid: f2a5d554aa6d44942a184076ec5e8ddf, type: 3}
+    outputGroup: {fileID: -506024407457346661, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
+    volume: 1
+    playOnAwake: 0
+    loop: 1
+  - clip: {fileID: 8300000, guid: 3dbc700f72f1b7641a17465c3fbc548a, type: 3}
+    outputGroup: {fileID: -506024407457346661, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
+    volume: 1
+    playOnAwake: 0
+    loop: 1
+  - clip: {fileID: 8300000, guid: 404e651a80c75a44bbe7cd0dfe827b1c, type: 3}
+    outputGroup: {fileID: -506024407457346661, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
+    volume: 1
+    playOnAwake: 0
+    loop: 1
+  - clip: {fileID: 8300000, guid: a217d44986df7754085f30243754c1fa, type: 3}
+    outputGroup: {fileID: -506024407457346661, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
+    volume: 1
+    playOnAwake: 0
+    loop: 1
+  - clip: {fileID: 8300000, guid: f034820d4702c7a4d9f1230aa5ac3ba4, type: 3}
+    outputGroup: {fileID: -506024407457346661, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
+    volume: 1
+    playOnAwake: 0
+    loop: 1
+  - clip: {fileID: 8300000, guid: 99b0b5f2d5a585248bf32eed91f9cb5e, type: 3}
+    outputGroup: {fileID: -506024407457346661, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
+    volume: 1
+    playOnAwake: 0
+    loop: 1
+  - clip: {fileID: 8300000, guid: bda164e74bd50aa479b8b02986f9c2e2, type: 3}
+    outputGroup: {fileID: -506024407457346661, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
+    volume: 1
+    playOnAwake: 0
+    loop: 1
+  - clip: {fileID: 8300000, guid: 0044c3d9780049844901bf90a7b8251f, type: 3}
+    outputGroup: {fileID: -506024407457346661, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
+    volume: 1
+    playOnAwake: 0
+    loop: 1
 --- !u!114 &5814054588742597497
 MonoBehaviour:
   m_ObjectHideFlags: 0

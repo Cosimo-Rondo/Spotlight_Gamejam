@@ -30,6 +30,7 @@ public class PaintingTimeline : MonoBehaviour
 
     void Init()
     {        
+        activeFrameCount = 0;
         frameCount = frames.Count;
         for (int i = 0; i < frameCount; i++)
         {

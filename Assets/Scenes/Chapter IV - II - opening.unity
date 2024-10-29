@@ -2506,7 +2506,6 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
-  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2636,24 +2635,6 @@ MonoBehaviour:
   smoothSpeed: 0.125
   currentCameraPoint: {fileID: 0}
   switchSceneMask: {fileID: 444814138}
---- !u!114 &519420034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49a8547ee3ebe324db007b58da0da94f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lastCamPointOutside: {fileID: 0}
-  CamPoint4: {fileID: 0}
-  CamPoint5: {fileID: 0}
-  CamPoint6: {fileID: 0}
-  Frame2_1: {fileID: 0}
-  Frame2_2: {fileID: 0}
 --- !u!1 &559784234
 GameObject:
   m_ObjectHideFlags: 0
@@ -3478,6 +3459,7 @@ GameObject:
   - component: {fileID: 771865783}
   - component: {fileID: 771865782}
   - component: {fileID: 771865781}
+  - component: {fileID: 771865784}
   m_Layer: 0
   m_Name: onStart
   m_TagString: Untagged
@@ -3500,7 +3482,19 @@ MonoBehaviour:
   eventTimePairs:
   - eventToTrigger:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 771865784}
+          m_TargetAssemblyTypeName: SingletonProxy, Assembly-CSharp
+          m_MethodName: PlayBGM
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: "BGM_2_2_\u9C81\u6602\u5927\u6559\u5802\u7684\u663C\u4E0E\u591C"
+            m_BoolArgument: 0
+          m_CallState: 2
     delayInSeconds: 1
   - eventToTrigger:
       m_PersistentCalls:
@@ -3560,6 +3554,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &771865784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771865780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b9030a78c5db6049a51e493861ee54e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &848365782
 GameObject:
   m_ObjectHideFlags: 0
@@ -6479,7 +6485,7 @@ MonoBehaviour:
   - eventToTrigger:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 519420034}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: Chapter3Controller, Assembly-CSharp
           m_MethodName: RecordLastCamPointOutside
           m_Mode: 1
@@ -7913,7 +7919,7 @@ MonoBehaviour:
   - eventToTrigger:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 519420034}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: Chapter3Controller, Assembly-CSharp
           m_MethodName: SwitchToLastCamPointOutside
           m_Mode: 1
@@ -7969,7 +7975,7 @@ MonoBehaviour:
   - eventToTrigger:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 519420034}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: Chapter3Controller, Assembly-CSharp
           m_MethodName: ShowFrameOutside
           m_Mode: 1
@@ -9885,6 +9891,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &2095970702
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5814054588742597492, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
 --- !u!1 &2107680571
 GameObject:
   m_ObjectHideFlags: 0

@@ -3837,7 +3837,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u54B3\u2026\u2026\u54B3\u2026\u2026"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2a1efe6720ed86844b26289e559be28c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d5e401e019ca8944a907c257bb53a2e8, type: 2}
   m_sharedMaterial: {fileID: -2486042195744950913, guid: 2a1efe6720ed86844b26289e559be28c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3901,7 +3901,7 @@ MonoBehaviour:
   m_margin: {x: -37.559723, y: 0, z: -214.94089, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &182723640
@@ -4345,7 +4345,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u82B1\u74F6\u91CC\u597D\u4E45\u90FD\u6CA1\u6709\u82B1\u4E86\u3002"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2a1efe6720ed86844b26289e559be28c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d5e401e019ca8944a907c257bb53a2e8, type: 2}
   m_sharedMaterial: {fileID: -2486042195744950913, guid: 2a1efe6720ed86844b26289e559be28c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4409,7 +4409,7 @@ MonoBehaviour:
   m_margin: {x: -37.559723, y: 0, z: -214.94089, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &227554726
@@ -5471,7 +5471,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u514B\u52B3\u5FB7\uFF0C\u6211\u997F\u4E86\u2026\u2026"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2a1efe6720ed86844b26289e559be28c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d5e401e019ca8944a907c257bb53a2e8, type: 2}
   m_sharedMaterial: {fileID: -2486042195744950913, guid: 2a1efe6720ed86844b26289e559be28c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5535,7 +5535,7 @@ MonoBehaviour:
   m_margin: {x: -37.559723, y: 0, z: -214.94089, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &287148721
@@ -7383,6 +7383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 428555413}
   - component: {fileID: 428555414}
+  - component: {fileID: 428555415}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Untagged
@@ -7437,16 +7438,16 @@ MonoBehaviour:
   - eventToTrigger:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1152118900}
-          m_TargetAssemblyTypeName: VisualElementAnimator, Assembly-CSharp
-          m_MethodName: Appear
-          m_Mode: 4
+        - m_Target: {fileID: 428555415}
+          m_TargetAssemblyTypeName: SingletonProxy, Assembly-CSharp
+          m_MethodName: PlayBGM
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: "BGM_1_3_\u6536\u62FE\u60C5\u7EEA"
             m_BoolArgument: 0
           m_CallState: 2
     delayInSeconds: 1
@@ -7514,6 +7515,18 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
     delayInSeconds: 1
+--- !u!114 &428555415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428555412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b9030a78c5db6049a51e493861ee54e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &429781879
 GameObject:
   m_ObjectHideFlags: 0
@@ -12844,6 +12857,7 @@ GameObject:
   - component: {fileID: 771865783}
   - component: {fileID: 771865782}
   - component: {fileID: 771865781}
+  - component: {fileID: 771865784}
   m_Layer: 0
   m_Name: onStart
   m_TagString: Untagged
@@ -12877,6 +12891,18 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 4
             m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 771865784}
+          m_TargetAssemblyTypeName: SingletonProxy, Assembly-CSharp
+          m_MethodName: PlayBGM
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: "BGM_3_1_\u70B9\u7F00\u82B1\u56ED"
             m_BoolArgument: 0
           m_CallState: 2
     delayInSeconds: -1
@@ -12938,6 +12964,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &771865784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771865780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b9030a78c5db6049a51e493861ee54e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &788913893
 GameObject:
   m_ObjectHideFlags: 0
@@ -12998,7 +13036,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u2026\u2026\u2026\u2026"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2a1efe6720ed86844b26289e559be28c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d5e401e019ca8944a907c257bb53a2e8, type: 2}
   m_sharedMaterial: {fileID: -2486042195744950913, guid: 2a1efe6720ed86844b26289e559be28c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -13062,7 +13100,7 @@ MonoBehaviour:
   m_margin: {x: -37.559723, y: 0, z: -214.94089, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &788913896
@@ -21982,7 +22020,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u8981\u662F\u80FD\u56DE\u5230\u8FC7\u53BB\u591A\u597D\u2026\u2026"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2a1efe6720ed86844b26289e559be28c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d5e401e019ca8944a907c257bb53a2e8, type: 2}
   m_sharedMaterial: {fileID: -2486042195744950913, guid: 2a1efe6720ed86844b26289e559be28c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -22046,7 +22084,7 @@ MonoBehaviour:
   m_margin: {x: -37.559723, y: 0, z: -214.94089, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1343150481
@@ -24590,7 +24628,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u2026\u2026"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2a1efe6720ed86844b26289e559be28c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d5e401e019ca8944a907c257bb53a2e8, type: 2}
   m_sharedMaterial: {fileID: -2486042195744950913, guid: 2a1efe6720ed86844b26289e559be28c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -24654,7 +24692,7 @@ MonoBehaviour:
   m_margin: {x: 11.618828, y: 0, z: -214.94089, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1459130720
@@ -24970,7 +25008,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1498401167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25107,9 +25145,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1266724812}
-        m_TargetAssemblyTypeName: ListTrigger, Assembly-CSharp
-        m_MethodName: TriggerEvents
+      - m_Target: {fileID: 936896853}
+        m_TargetAssemblyTypeName: DialoguePlayer, Assembly-CSharp
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27149,7 +27187,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u54B3\u2026\u2026\u54B3\u2026\u2026"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2a1efe6720ed86844b26289e559be28c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d5e401e019ca8944a907c257bb53a2e8, type: 2}
   m_sharedMaterial: {fileID: -2486042195744950913, guid: 2a1efe6720ed86844b26289e559be28c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -27213,7 +27251,7 @@ MonoBehaviour:
   m_margin: {x: 11.618828, y: 0, z: -214.94089, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1611425656
@@ -27668,6 +27706,7 @@ GameObject:
   - component: {fileID: 1635773357}
   - component: {fileID: 1635773356}
   - component: {fileID: 1635773358}
+  - component: {fileID: 1635773359}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Untagged
@@ -27841,8 +27880,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 2013611977}
-          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        - m_Target: {fileID: 1635773359}
+          m_TargetAssemblyTypeName: SingletonProxy, Assembly-CSharp
           m_MethodName: PlayBGM
           m_Mode: 5
           m_Arguments:
@@ -27926,6 +27965,18 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
     delayInSeconds: 1
+--- !u!114 &1635773359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635773354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b9030a78c5db6049a51e493861ee54e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1639143929
 GameObject:
   m_ObjectHideFlags: 0
@@ -30480,7 +30531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8ea26a7ba89ee45854e8e1345e24c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterData: {fileID: 11400000, guid: 73e8d7795643a1b49b7814e2b05fa7b8, type: 2}
+  letterData: {fileID: 11400000, guid: 46fe20c7750d2f749bc0d9a0dac4bc26, type: 2}
   textDisplay: {fileID: 848365784}
   fadeInDuration: 1
   delayBetweenSentences: -1
@@ -31015,7 +31066,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u2026\u2026"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2a1efe6720ed86844b26289e559be28c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d5e401e019ca8944a907c257bb53a2e8, type: 2}
   m_sharedMaterial: {fileID: -2486042195744950913, guid: 2a1efe6720ed86844b26289e559be28c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -31079,7 +31130,7 @@ MonoBehaviour:
   m_margin: {x: -37.559723, y: 0, z: -214.94089, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1836679431
@@ -31403,7 +31454,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u6C34\u2026\u2026"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2a1efe6720ed86844b26289e559be28c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d5e401e019ca8944a907c257bb53a2e8, type: 2}
   m_sharedMaterial: {fileID: -2486042195744950913, guid: 2a1efe6720ed86844b26289e559be28c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -31467,7 +31518,7 @@ MonoBehaviour:
   m_margin: {x: -37.559723, y: 0, z: -214.94089, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1861244319
@@ -32850,6 +32901,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1965111281}
   - component: {fileID: 1965111282}
+  - component: {fileID: 1965111283}
   m_Layer: 0
   m_Name: To Act III
   m_TagString: Untagged
@@ -32910,6 +32962,18 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1965111283}
+          m_TargetAssemblyTypeName: SingletonProxy, Assembly-CSharp
+          m_MethodName: PlayBGM
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: "BGM_1_3_\u79BB\u522B"
             m_BoolArgument: 0
           m_CallState: 2
     delayInSeconds: 10
@@ -32977,6 +33041,18 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
     delayInSeconds: 1
+--- !u!114 &1965111283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965111280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b9030a78c5db6049a51e493861ee54e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1967843372
 GameObject:
   m_ObjectHideFlags: 0
@@ -34679,7 +34755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8ea26a7ba89ee45854e8e1345e24c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterData: {fileID: 11400000, guid: d3c4083c4ba9ef84e81ad222fa540825, type: 2}
+  letterData: {fileID: 11400000, guid: 7b8371cf24f15f2419d80309f8f5de2f, type: 2}
   textDisplay: {fileID: 1528140784}
   fadeInDuration: 1
   delayBetweenSentences: -1
