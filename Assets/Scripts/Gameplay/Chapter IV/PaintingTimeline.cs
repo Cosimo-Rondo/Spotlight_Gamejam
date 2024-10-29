@@ -7,6 +7,7 @@ using DG.Tweening;
 public class PaintingTimeline : MonoBehaviour
 {
     public Color inActiveColor = Color.gray;
+    public List<Color> iconColors = new List<Color>();
     public List<Frame> frames = new List<Frame>();
     public List<Image> icons = new List<Image>();
     public List<VisualElementAnimator> backgrounds = new List<VisualElementAnimator>();
@@ -14,7 +15,11 @@ public class PaintingTimeline : MonoBehaviour
     private int frameCount;
     private int currentIndex = -1;
     private Vector3 originalIconScale;
-    public float switchInterval = 10f; // ÇÐ»»¼ä¸ô£¬µ¥Î»ÎªÃë
+    public float switchInterval = 10f; // ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»Îªï¿½ï¿½
+
+    public Light lastFrameLightA, lastFrameLightB, lastFrameLightC;
+    public ListTrigger lastFrameCompleteTrigger;
+    public VisualElementAnimator switchSceneMask;
 
     void Awake()
     {
@@ -45,7 +50,10 @@ public class PaintingTimeline : MonoBehaviour
 
     void Update()
     {
-        
+        if (!lastFrameLightA.IsLightOn() && !lastFrameLightB.IsLightOn() && !lastFrameLightC.IsLightOn())
+        {
+            lastFrameCompleteTrigger.TriggerEvents();
+        }
     }
 
     public void SetCurrentFrame(int index)
@@ -100,5 +108,18 @@ public class PaintingTimeline : MonoBehaviour
             SetCurrentFrame(nextIndex);
             yield return new WaitForSeconds(switchInterval * 0.2f);
         }
+    }
+    int activeFrameCount = 0;
+    public void SetFrameActive(int index)
+    {
+        isFrameCompleted[index] = true;
+        icons[index].color = iconColors[index];
+        activeFrameCount++;
+        if (activeFrameCount == 6) NextScene();
+    }
+    public void NextScene()
+    {
+        switchSceneMask.Appear(2);
+        SceneSwitcher.Instance.SwitchScene("Chapter V - I");
     }
 }
