@@ -8,7 +8,7 @@ public class CompletePaint : MonoBehaviour
     [Header("Jigsaw Handler")]
     public List<GameObject> pieces;
     public bool isCompleted;
-    public GameObject homeIcon;
+    public VisualElementAnimator animator;
 
     [Header("OnClickDarken")]
     public bool isEnd;
@@ -37,7 +37,7 @@ public class CompletePaint : MonoBehaviour
     void Update()
     {
         if(isCompleted&&!isEnd) //完成拼图且不是最后一关
-            homeIcon.GetComponent<VisualElementAnimator>().Appear();
+            animator.Appear();
         if(isCompleted&&isEnd){ //完成拼图且是最后一关
             blackImage.color=new Color(0f,0f,0f,1f);
             endCouroutine=StartCoroutine(SetEndText());
