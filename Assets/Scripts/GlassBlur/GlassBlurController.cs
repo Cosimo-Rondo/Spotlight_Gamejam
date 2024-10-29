@@ -26,6 +26,13 @@ public class GlassBlurController : MonoBehaviour
     }
     public void GoOutside()
     {
+        
+        StartCoroutine(GlassOutside());        
+    }
+
+    IEnumerator GlassOutside()
+    {
+        yield return new WaitForSeconds(2);
         mat.SetTexture("_ClearTex", outside);
         mat.SetVector("_SampleOffset", new Vector4(0, 25, 80f, 0.5f));
     }

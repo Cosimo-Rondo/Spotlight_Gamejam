@@ -7346,8 +7346,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4279640631
+  m_fontColor: {r: 0.21568628, g: 0.13333334, b: 0.08627451, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9492,6 +9492,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 920206857}
+        m_TargetAssemblyTypeName: VisualElementAnimator, Assembly-CSharp
+        m_MethodName: Disappear
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1892313199}
+        m_TargetAssemblyTypeName: VisualElementAnimator, Assembly-CSharp
+        m_MethodName: Appear
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1647085697
 Transform:
   m_ObjectHideFlags: 0
@@ -9701,6 +9725,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1892313199}
+        m_TargetAssemblyTypeName: VisualElementAnimator, Assembly-CSharp
+        m_MethodName: Disappear
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -11884,7 +11920,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c313d78286c25cb44af3c17fd2502225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfPieces: 4
   pieces:
   - {fileID: 278893561}
   - {fileID: 24788400}
@@ -11892,6 +11927,11 @@ MonoBehaviour:
   - {fileID: 291579234}
   isCompleted: 0
   homeIcon: {fileID: 1683569907}
+  isEnd: 0
+  blackImage: {fileID: 0}
+  endText: {fileID: 0}
+  clickTime: 8
+  listTrigger: {fileID: 0}
 --- !u!114 &2010718690
 MonoBehaviour:
   m_ObjectHideFlags: 0

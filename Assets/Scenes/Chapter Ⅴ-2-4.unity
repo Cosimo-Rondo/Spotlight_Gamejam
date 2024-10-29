@@ -2184,7 +2184,7 @@ MonoBehaviour:
   - eventToTrigger:
       m_PersistentCalls:
         m_Calls: []
-    delayInSeconds: 3
+    delayInSeconds: 1
   - eventToTrigger:
       m_PersistentCalls:
         m_Calls: []
@@ -2307,8 +2307,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1871797711}
+  - {fileID: 395359303}
   m_Father: {fileID: 1603822897}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &291579234
 GameObject:
@@ -2446,7 +2447,7 @@ MonoBehaviour:
   targetPos: {x: -10.11, y: 0, z: -10}
   smoothSpeed: 0.125
   currentCameraPoint: {fileID: 0}
-  switchSceneMask: {fileID: 0}
+  switchSceneMask: {fileID: 969604671}
 --- !u!114 &302239112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3259,13 +3260,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395359302}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.13, y: 0.23, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14.130001, y: 0.23000002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1603822897}
-  m_RootOrder: 0
+  m_Father: {fileID: 285088543}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &395359304
 BoxCollider2D:
@@ -5442,6 +5443,7 @@ MonoBehaviour:
   isMovingLight: 0
   currentActiveLight: {fileID: 0}
   cursorOffset: {x: 0, y: 0, z: 0}
+  cursorSize: {x: 32, y: 32}
   isCursorOverActiveZoneOfCanvas: 0
   isCursorOverRotationZoneOfCanvas: 0
 --- !u!4 &791808962
@@ -8298,8 +8300,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4279640631
+  m_fontColor: {r: 0.21568628, g: 0.13333334, b: 0.08627451, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9693,7 +9695,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 395359303}
   - {fileID: 285088543}
   m_Father: {fileID: 1647714251}
   m_RootOrder: 3
@@ -12988,7 +12989,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c313d78286c25cb44af3c17fd2502225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfPieces: 9
   pieces:
   - {fileID: 278893561}
   - {fileID: 24788400}
@@ -13001,6 +13001,11 @@ MonoBehaviour:
   - {fileID: 1048631125}
   isCompleted: 0
   homeIcon: {fileID: 1683569907}
+  isEnd: 0
+  blackImage: {fileID: 0}
+  endText: {fileID: 0}
+  clickTime: 8
+  listTrigger: {fileID: 0}
 --- !u!114 &2010718690
 MonoBehaviour:
   m_ObjectHideFlags: 0
