@@ -121,7 +121,14 @@ public class Chapter4Clock : MonoBehaviour
         if (selectable == null) return 1f;
         return selectable.IsHighlighted() ? 100f : 1f;
     }
-
+    public void SetHourTime(float hour)
+    {
+        minuteTime = hour * 60;
+    }
+    public void SetSeason(Season season)
+    {
+        currentSeason = season;
+    }
     void UpdateWindowView()
     {
         

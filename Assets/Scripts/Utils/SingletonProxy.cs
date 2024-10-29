@@ -16,4 +16,8 @@ public class SingletonProxy : MonoBehaviour
     {
         AudioManager.PlaySFXWait(name);
     }
+    public void SwitchScene(string name)
+    {
+        SceneSwitcher.Instance.SwitchScene(name);
+    }
 }
