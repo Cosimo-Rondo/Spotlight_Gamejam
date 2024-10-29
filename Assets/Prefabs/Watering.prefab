@@ -389,6 +389,7 @@ GameObject:
   - component: {fileID: 3205712095025743582}
   - component: {fileID: 3205712095025743583}
   - component: {fileID: 3205712095025743552}
+  - component: {fileID: 911597640820802717}
   m_Layer: 0
   m_Name: Pot
   m_TagString: Untagged
@@ -503,3 +504,43 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4575377, y: 1.8815076}
   m_EdgeRadius: 0
+--- !u!114 &911597640820802717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3205712095025743580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eab173e2037471d4f993c2171e4b323c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onSelectEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onUnselectEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onHighlightEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onUnhighlightEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onHoldEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  spriteRenderer: {fileID: 0}
+  image: {fileID: 0}
+  textMeshPro: {fileID: 0}
+  highlightTarget: {fileID: 0}
+  mouseDetectArea: {fileID: 0}
+  isUIElement: 0
+  unhighlightOnSelect: 1
+  selectType: 0
+  highlightType: 2
+  highlightColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightSprite: {fileID: 21300000, guid: c8acbdb71dce90a468675f2e90c15a74, type: 3}
+  borderWidth: 1
+  highlightScale: {x: 1.1, y: 1.1, z: 1.1}
