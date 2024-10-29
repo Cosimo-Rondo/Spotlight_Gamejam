@@ -4799,8 +4799,9 @@ MonoBehaviour:
   activeZoneCursorSprite: {fileID: 0}
   rotationZoneCursorSprite: {fileID: 21300000, guid: 6731a6b0a85e5c9428bbb3534e8bf8b9, type: 3}
   isMovingLight: 0
-  currentMovingLight: {fileID: 0}
+  currentActiveLight: {fileID: 0}
   cursorOffset: {x: 0, y: 0, z: -5}
+  cursorSize: {x: 32, y: 32}
   isCursorOverActiveZoneOfCanvas: 0
   isCursorOverRotationZoneOfCanvas: 0
 --- !u!4 &791808962
@@ -5779,6 +5780,8 @@ MonoBehaviour:
   operationType: 0
   visualElementAnimator: {fileID: 0}
   lightIcon: {fileID: 420213966}
+  isMouseHolding: 0
+  isHovering: 0
   useLegacyInteraction: 0
 --- !u!114 &961522210
 MonoBehaviour:
@@ -7792,6 +7795,8 @@ MonoBehaviour:
   operationType: 0
   visualElementAnimator: {fileID: 0}
   lightIcon: {fileID: 420213966}
+  isMouseHolding: 0
+  isHovering: 0
   useLegacyInteraction: 0
 --- !u!114 &1406647376
 MonoBehaviour:
@@ -11118,6 +11123,63 @@ MonoBehaviour:
   interestedColliders:
   - {fileID: 388650242}
   alpha: 1
+--- !u!1001 &1810889784
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5814054588742597492, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
 --- !u!1 &1813690834
 GameObject:
   m_ObjectHideFlags: 0
@@ -13259,6 +13321,8 @@ MonoBehaviour:
   operationType: 0
   visualElementAnimator: {fileID: 0}
   lightIcon: {fileID: 1771327676}
+  isMouseHolding: 0
+  isHovering: 0
   useLegacyInteraction: 0
 --- !u!4 &7465411566715829356
 Transform:

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CursorManager : MonoBehaviour
 {
@@ -31,9 +32,11 @@ public class CursorManager : MonoBehaviour
     public bool isMovingLight = false;
     public Light currentActiveLight = null;
     [SerializeField] private Vector3 cursorOffset = Vector3.zero;
+    [SerializeField] private Vector2 cursorSize = new Vector2(32, 32); // 新增：可在Inspector中调整的光标大小
 
     private GameObject cursorObject;
-    private SpriteRenderer cursorSpriteRenderer;
+    private Image cursorImage;
+    private Canvas cursorCanvas;
 
     private void Awake()
     {
@@ -51,17 +54,47 @@ public class CursorManager : MonoBehaviour
 
     private void InitializeCursorSprite()
     {
+        // 创建 Canvas
+        GameObject canvasObj = new GameObject("CursorCanvas");
+        cursorCanvas = canvasObj.AddComponent<Canvas>();
+        cursorCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
+        cursorCanvas.sortingOrder = 9999;
+        
+        // 添加 CanvasScaler
+        CanvasScaler scaler = canvasObj.AddComponent<CanvasScaler>();
+        scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+        
+        // 创建光标
         cursorObject = new GameObject("CursorSprite");
-        cursorSpriteRenderer = cursorObject.AddComponent<SpriteRenderer>();
-        cursorSpriteRenderer.sortingOrder = 9999; // Ensure it's rendered on top
+        cursorObject.transform.SetParent(canvasObj.transform, false);
+        cursorImage = cursorObject.AddComponent<Image>();
+        cursorImage.raycastTarget = false;
+        
         Cursor.visible = false;
-        cursorObject.transform.localScale = Vector3.one * 0.7f;
+        UpdateCursorSize(); // 新增：更新光标大小
     }
 
     private void Update()
     {
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        cursorObject.transform.position = (Vector3)mousePosition + cursorOffset;
+        // 使用屏幕坐标
+        if (Input.GetMouseButtonUp(0))
+        {
+            isMovingLight = false;
+        }
+        cursorObject.transform.position = Input.mousePosition + (Vector3)cursorOffset;
+    }
+
+    // 新增：更新光标大小的方法
+    private void UpdateCursorSize()
+    {
+        if (cursorObject != null)
+        {
+            RectTransform rectTransform = cursorObject.GetComponent<RectTransform>();
+            if (rectTransform != null)
+            {
+                rectTransform.sizeDelta = cursorSize;
+            }
+        }
     }
 
     public bool isCursorOverUI { get; private set; } = false;
@@ -130,16 +163,17 @@ public class CursorManager : MonoBehaviour
         if (isMovingLight) return;
         if (isCursorOverRotationZoneOfCanvas)
         {
-            cursorSpriteRenderer.sprite = rotationZoneCursorSprite;
+            cursorImage.sprite = rotationZoneCursorSprite;
         }
         else
         {
             SetDefaultCursor();
         }
+        UpdateCursorSize(); // 新增：在更新光标外观时同时更新大小
     }
 
     private void SetDefaultCursor()
     {
-        cursorSpriteRenderer.sprite = defaultCursorSprite;
+        cursorImage.sprite = defaultCursorSprite;
     }
 }

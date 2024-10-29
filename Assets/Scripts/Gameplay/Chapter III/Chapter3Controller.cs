@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Chapter3Controller : MonoBehaviour
 {
@@ -14,7 +15,6 @@ public class Chapter3Controller : MonoBehaviour
     }
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -39,5 +39,13 @@ public class Chapter3Controller : MonoBehaviour
         {
             Frame2_2.Appear();
         }
+    }
+    public void NextChapter()
+    {
+        SceneSwitcher.Instance.SwitchScene("Chapter IV - II");
+    }
+    public void Umbrella()
+    {
+        
     }
 }

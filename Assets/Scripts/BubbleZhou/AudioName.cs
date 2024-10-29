@@ -7,7 +7,20 @@ public static class AudioName
 {
 
     public static string BGM0 { get => "BGM_0"; }
-    public static string[] BGM1_1 { get => new string[1] { "BGM_1_3_2" }; }
+    public static string BGM1_1 { get => "BGM_1_1_画红裙"; }
+    public static string BGM1_2 { get => "BGM_1_2_撑伞的女人"; }
+    public static string BGM1_3_1 { get => "BGM_1_3_离别"; }
+    public static string BGM1_3_2 { get => "BGM_1_3_收拾情绪"; }
+    public static string BGM2_1 { get => "BGM_2_1_干草堆"; }
+    public static string BGM2_2 { get => "BGM_2_2_鲁昂大教堂的昼与夜"; }
+    public static string BGM3_1 { get => "BGM_3_1_点缀花园"; }
+    public static string BGM3_2_1 { get => "BGM_3_2_第一二天室内"; }
+    public static string BGM3_2_2 { get => "BGM_3_2_第一二三天室外"; }
+    public static string BGM3_2_3 { get => "BGM_3_2_第三天室内"; }
+    public static string BGM3_2_4 { get => "BGM_3_2_第四天室内外"; }
+    public static string BGM3_3 { get => "BGM_3_3_术后"; }
+    public static string BGM4 { get => "BGM_4_尾声"; }
+
     /*// 测试BGM
     public static string BGM2 { get => "BGM2"; }
     public static string BOSS1BGM { get => "BOSS1BGM"; }

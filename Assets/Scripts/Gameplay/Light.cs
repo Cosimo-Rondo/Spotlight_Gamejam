@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Rendering.Universal;
 
 public class Light : MonoBehaviour
@@ -138,7 +139,7 @@ public class Light : MonoBehaviour
                 lastClickTime = Time.time;
                 lastMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             }
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(1) && lightIcon != null)
             {
                 PutBack();
             }
@@ -214,7 +215,7 @@ public class Light : MonoBehaviour
                 lastClickTime = Time.time;
                 lastMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             }
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(1) && lightIcon != null)
             {
                 PutBack();
             }
@@ -264,7 +265,15 @@ public class Light : MonoBehaviour
     }
     public void PutBack(bool forever = false)
     {
-        if (lightIcon == null) return;
+        if (CursorManager.Instance.currentActiveLight == this)
+        {
+            CursorManager.Instance.currentActiveLight = null;
+            CursorManager.Instance.isMovingLight = false;
+        }
+        if (isHovering)
+        {
+            isHovering = false;
+        }
         visualElementAnimator.Disappear();
         if (!forever)
         {

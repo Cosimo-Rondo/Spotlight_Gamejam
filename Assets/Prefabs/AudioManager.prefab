@@ -47,17 +47,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "\u573A\u666FBGM\u5217\u8868":
   - sceneName: Chapter III
-    bgmName: BGM_0
+    bgmName: "BGM_1_1_\u753B\u7EA2\u88D9"
+  - sceneName: Chapter IV - II
+    bgmName: "BGM_2_2_\u9C81\u6602\u5927\u6559\u5802\u7684\u663C\u4E0E\u591C"
+  - sceneName: Chapter V - I
+    bgmName: "BGM_3_1_\u70B9\u7F00\u82B1\u56ED"
   sounds:
-  - clip: {fileID: 8300000, guid: f2a5d554aa6d44942a184076ec5e8ddf, type: 3}
+  - clip: {fileID: 8300000, guid: da17b5dc8a251b04a84df796a7bb6f84, type: 3}
     outputGroup: {fileID: -506024407457346661, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
     volume: 1
-    playOnAwake: 1
+    playOnAwake: 0
     loop: 1
-  - clip: {fileID: 8300000, guid: bdb8ed21d6ba5f042b96c3ee2cc96dde, type: 3}
+  - clip: {fileID: 8300000, guid: fbaf3dc3d5ab2e54381bf58813881eae, type: 3}
     outputGroup: {fileID: -506024407457346661, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
     volume: 1
-    playOnAwake: 1
+    playOnAwake: 0
+    loop: 1
+  - clip: {fileID: 8300000, guid: 4ab1bc55583714b4db625badaa274f4d, type: 3}
+    outputGroup: {fileID: -506024407457346661, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
+    volume: 1
+    playOnAwake: 0
+    loop: 1
+  - clip: {fileID: 8300000, guid: f756e42702f097a46aa3b023a556b51e, type: 3}
+    outputGroup: {fileID: -506024407457346661, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
+    volume: 1
+    playOnAwake: 0
+    loop: 1
+  - clip: {fileID: 8300000, guid: 1a8ca75b7ee2b30489ed6c7556e6b522, type: 3}
+    outputGroup: {fileID: -506024407457346661, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
+    volume: 1
+    playOnAwake: 0
+    loop: 1
+  - clip: {fileID: 8300000, guid: 36b680f9cc540654f92dd45c2fb931d1, type: 3}
+    outputGroup: {fileID: -506024407457346661, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
+    volume: 1
+    playOnAwake: 0
+    loop: 1
+  - clip: {fileID: 8300000, guid: ea612e8daf5835a4f91deaa641bc8479, type: 3}
+    outputGroup: {fileID: -506024407457346661, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
+    volume: 1
+    playOnAwake: 0
     loop: 1
 --- !u!114 &5814054588742597497
 MonoBehaviour:
