@@ -138,7 +138,7 @@ MonoBehaviour:
     useMove: 0
     moveTarget: {x: 0, y: 0}
     useScale: 0
-    scaleTarget: {x: 1, y: 1}
+    scaleTarget: {x: 1, y: 1, z: 1}
     duration: 1
     easeType: 7
   disappearParams:
@@ -147,7 +147,7 @@ MonoBehaviour:
     useMove: 0
     moveTarget: {x: 0, y: 0}
     useScale: 0
-    scaleTarget: {x: 1, y: 1}
+    scaleTarget: {x: 1, y: 1, z: 1}
     duration: 1
     easeType: 7
   contentsRoot: {fileID: 0}
@@ -246,6 +246,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onLocked:
+    m_PersistentCalls:
+      m_Calls: []
   isUnlocked: 0
 --- !u!61 &3205712094509753352
 BoxCollider2D:
@@ -326,7 +329,7 @@ MonoBehaviour:
     useMove: 0
     moveTarget: {x: 0, y: 0}
     useScale: 0
-    scaleTarget: {x: 1, y: 1}
+    scaleTarget: {x: 1, y: 1, z: 1}
     duration: 1
     easeType: 7
   disappearParams:
@@ -335,7 +338,7 @@ MonoBehaviour:
     useMove: 0
     moveTarget: {x: 0, y: 0}
     useScale: 0
-    scaleTarget: {x: 1, y: 1}
+    scaleTarget: {x: 1, y: 1, z: 1}
     duration: 1
     easeType: 7
   contentsRoot: {fileID: 0}
@@ -448,7 +451,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 2c224f674081ab541bc205e401471e79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
