@@ -2164,9 +2164,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 395359303}
   - {fileID: 1871797711}
   m_Father: {fileID: 1603822897}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &291579234
 GameObject:
@@ -2980,12 +2981,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395359302}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.13, y: 0.23, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14.130001, y: 0.23000002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1603822897}
+  m_Father: {fileID: 285088543}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &395359304
@@ -4941,13 +4942,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPuzzleItem: {fileID: 0}
   currentItemTargetAreas: []
-  defaultCursorSprite: {fileID: 0}
+  defaultCursorSprite: {fileID: 21300000, guid: 8711bd568c9334c4d880f8344f21206a, type: 3}
   uiCursorSprite: {fileID: 0}
   activeZoneCursorSprite: {fileID: 0}
-  rotationZoneCursorSprite: {fileID: 0}
+  rotationZoneCursorSprite: {fileID: 21300000, guid: 6731a6b0a85e5c9428bbb3534e8bf8b9, type: 3}
   isMovingLight: 0
   currentActiveLight: {fileID: 0}
   cursorOffset: {x: 0, y: 0, z: 0}
+  cursorSize: {x: 18, y: 18}
   isCursorOverActiveZoneOfCanvas: 0
   isCursorOverRotationZoneOfCanvas: 0
 --- !u!4 &791808962
@@ -8876,7 +8878,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 395359303}
   - {fileID: 285088543}
   m_Father: {fileID: 1647714251}
   m_RootOrder: 3
@@ -8896,7 +8897,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1604416180
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9107,7 +9108,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1635773355
 Transform:
   m_ObjectHideFlags: 0
@@ -9130,7 +9131,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635773354}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -9156,7 +9157,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635773354}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eab173e2037471d4f993c2171e4b323c, type: 3}
   m_Name: 
@@ -10765,7 +10766,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 285088543}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1871797712
 SpriteRenderer:
