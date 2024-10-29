@@ -1193,6 +1193,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &177412472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 177412473}
+  m_Layer: 0
+  m_Name: GameRoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &177412473
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177412472}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.8725834, y: -46.969402, z: -1.158267}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2099883991}
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &186459260
 GameObject:
   m_ObjectHideFlags: 0
@@ -2181,6 +2213,18 @@ MonoBehaviour:
           m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1068622230}
+        m_TargetAssemblyTypeName: SingletonProxy, Assembly-CSharp
+        m_MethodName: StopAudio
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "SFX_\u5199\u4FE1\uFF0C\u5FAA\u73AF\u64AD\u653E"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &281072600
@@ -3303,6 +3347,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1068622230}
+        m_TargetAssemblyTypeName: SingletonProxy, Assembly-CSharp
+        m_MethodName: PlaySFXWait
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "SFX_\u5F00\u95E8"
+          m_BoolArgument: 0
+        m_CallState: 2
   onUnselectEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -3951,6 +4007,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1068622230}
+        m_TargetAssemblyTypeName: SingletonProxy, Assembly-CSharp
+        m_MethodName: PlayBGM
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "BGM_3_2_\u7B2C\u56DB\u5929\u5BA4\u5185\u5916"
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &464573662
 Transform:
   m_ObjectHideFlags: 0
@@ -4077,6 +4145,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1068622230}
+        m_TargetAssemblyTypeName: SingletonProxy, Assembly-CSharp
+        m_MethodName: PlaySFXNoWait
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "SFX_\u5F00\u95E8"
           m_BoolArgument: 0
         m_CallState: 2
   onUnselectEvent:
@@ -5105,7 +5185,7 @@ MonoBehaviour:
   isUIElement: 0
   isDragArea: 0
   isDraggable: 0
-  isActiveArea: 0
+  isActiveArea: 1
   isRotateArea: 0
   isTransparentArea: 1
   unhighlightOnSelect: 0
@@ -6678,6 +6758,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1068622230}
+        m_TargetAssemblyTypeName: SingletonProxy, Assembly-CSharp
+        m_MethodName: PlaySFXWait
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "SFX_\u5F00\u95E8"
+          m_BoolArgument: 0
+        m_CallState: 2
   onLocked:
     m_PersistentCalls:
       m_Calls:
@@ -7321,7 +7413,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011987180}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eab173e2037471d4f993c2171e4b323c, type: 3}
   m_Name: 
@@ -7979,6 +8071,50 @@ MonoBehaviour:
     easeType: 7
   contentsRoot: {fileID: 0}
   useLocalPosition: 1
+--- !u!1 &1068622229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1068622231}
+  - component: {fileID: 1068622230}
+  m_Layer: 0
+  m_Name: SingletonProxy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1068622230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068622229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b9030a78c5db6049a51e493861ee54e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1068622231
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068622229}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.2737885, y: -26.910908, z: -0.038534675}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1084777678
 GameObject:
   m_ObjectHideFlags: 0
@@ -9219,6 +9355,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1441383450}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onUnselectEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -9235,6 +9383,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1068622230}
+        m_TargetAssemblyTypeName: SingletonProxy, Assembly-CSharp
+        m_MethodName: PlaySFXNoWait
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "SFX_\u7075\u611F\u4E4D\u73B0"
           m_BoolArgument: 1
         m_CallState: 2
   onUnhighlightEvent:
@@ -9268,7 +9428,7 @@ MonoBehaviour:
   isTransparentArea: 1
   unhighlightOnSelect: 1
   selectType: 0
-  highlightType: 1
+  highlightType: 3
   highlightColor: {r: 1, g: 1, b: 1, a: 1}
   highlightSprite: {fileID: 0}
   borderWidth: 1
@@ -10773,6 +10933,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1068622230}
+        m_TargetAssemblyTypeName: SingletonProxy, Assembly-CSharp
+        m_MethodName: PlaySFXNoWait
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "SFX_\u753B\u653E\u5230\u753B\u6846\u4E0A"
+          m_BoolArgument: 0
+        m_CallState: 2
   onUnselectEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -11699,6 +11871,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1068622230}
+        m_TargetAssemblyTypeName: SingletonProxy, Assembly-CSharp
+        m_MethodName: PlaySFXNoWait
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "SFX_\u753B\u653E\u5230\u753B\u6846\u4E0A"
+          m_BoolArgument: 0
+        m_CallState: 2
   onUnselectEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -12601,6 +12785,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1068622230}
+        m_TargetAssemblyTypeName: SingletonProxy, Assembly-CSharp
+        m_MethodName: PlaySFXNoWait
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "SFX_\u5199\u4FE1\uFF0C\u5FAA\u73AF\u64AD\u653E"
+          m_BoolArgument: 0
+        m_CallState: 2
   onUnselectEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -13282,6 +13478,7 @@ GameObject:
   - component: {fileID: 2010718689}
   - component: {fileID: 2010718691}
   - component: {fileID: 2010718690}
+  - component: {fileID: 2010718692}
   m_Layer: 0
   m_Name: Completed
   m_TagString: Untagged
@@ -13349,6 +13546,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onSelectEvent:
     m_PersistentCalls:
+      m_Calls: []
+  onUnselectEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onHighlightEvent:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2010718689}
         m_TargetAssemblyTypeName: CompletePaint, Assembly-CSharp
@@ -13362,12 +13565,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onUnselectEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onHighlightEvent:
-    m_PersistentCalls:
-      m_Calls: []
+      - m_Target: {fileID: 2010718692}
+        m_TargetAssemblyTypeName: DrawingCompleteAudio, Assembly-CSharp
+        m_MethodName: PlayFinishAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onUnhighlightEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -13418,6 +13627,35 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.121936, y: 6.9300385}
   m_EdgeRadius: 0
+--- !u!114 &2010718692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010718687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8b4df7fef66ffc41b7488a89da22d5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playAudio:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1068622230}
+        m_TargetAssemblyTypeName: SingletonProxy, Assembly-CSharp
+        m_MethodName: PlaySFXNoWait
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "SFX_\u6210\u529F"
+          m_BoolArgument: 0
+        m_CallState: 2
+  completePaint: {fileID: 0}
+  isPlayed: 0
 --- !u!1 &2027037514
 GameObject:
   m_ObjectHideFlags: 0
@@ -13836,6 +14074,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &2099883990
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 177412473}
+    m_Modifications:
+    - target: {fileID: 5814054588742597492, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+--- !u!4 &2099883991 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5814054588742597494, guid: 883000cfdc0705648b2c85a89927daef, type: 3}
+  m_PrefabInstance: {fileID: 2099883990}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2100053464
 GameObject:
   m_ObjectHideFlags: 0

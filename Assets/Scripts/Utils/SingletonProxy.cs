@@ -16,4 +16,8 @@ public class SingletonProxy : MonoBehaviour
     {
         AudioManager.PlaySFXWait(name);
     }
+    public void StopAudio(string name)
+    {
+        AudioManager.StopAudio(name);
+    }
 }

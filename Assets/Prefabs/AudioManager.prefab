@@ -45,45 +45,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44f739fc8b9aec540a936f02e568211b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "\u573A\u666FBGM\u5217\u8868":
-  - sceneName: Chapter III
-    bgmName: "BGM_1_1_\u753B\u7EA2\u88D9"
-  - sceneName: Chapter IV - II
-    bgmName: "BGM_2_2_\u9C81\u6602\u5927\u6559\u5802\u7684\u663C\u4E0E\u591C"
-  - sceneName: Chapter V - I
-    bgmName: "BGM_3_1_\u70B9\u7F00\u82B1\u56ED"
   sounds:
   - clip: {fileID: 8300000, guid: 0175ea2529a175c4281b53f6d4212af4, type: 3}
     outputGroup: {fileID: 2631526386466028730, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
     volume: 1
     playOnAwake: 0
     loop: 1
-  - clip: {fileID: 8300000, guid: fbaf3dc3d5ab2e54381bf58813881eae, type: 3}
+  - clip: {fileID: 8300000, guid: 5a6a31d31588e584b858784fbaba5ae6, type: 3}
+    outputGroup: {fileID: 2631526386466028730, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
+    volume: 1
+    playOnAwake: 0
+    loop: 0
+  - clip: {fileID: 8300000, guid: a8b977a547c02f248ab6d91eabb84904, type: 3}
+    outputGroup: {fileID: 2631526386466028730, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
+    volume: 1
+    playOnAwake: 0
+    loop: 0
+  - clip: {fileID: 8300000, guid: 942afd7cdd580d74cb1a4541fc574e63, type: 3}
+    outputGroup: {fileID: 2631526386466028730, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
+    volume: 1
+    playOnAwake: 0
+    loop: 0
+  - clip: {fileID: 8300000, guid: dfb7b3593bc46d94daa57bcb388e2e72, type: 3}
+    outputGroup: {fileID: 2631526386466028730, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
+    volume: 1
+    playOnAwake: 0
+    loop: 0
+  - clip: {fileID: 8300000, guid: a82c052c3e83b8c4eb3b367790c72f8a, type: 3}
+    outputGroup: {fileID: 2631526386466028730, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
+    volume: 1
+    playOnAwake: 0
+    loop: 0
+  - clip: {fileID: 8300000, guid: 67d8c281f589a684a81c576192da8179, type: 3}
     outputGroup: {fileID: -506024407457346661, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
     volume: 1
     playOnAwake: 0
     loop: 1
-  - clip: {fileID: 8300000, guid: 4ab1bc55583714b4db625badaa274f4d, type: 3}
+  - clip: {fileID: 8300000, guid: 9ed35e92cc7adca4a82f0fa8537b5296, type: 3}
     outputGroup: {fileID: -506024407457346661, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
     volume: 1
     playOnAwake: 0
     loop: 1
-  - clip: {fileID: 8300000, guid: f756e42702f097a46aa3b023a556b51e, type: 3}
+  - clip: {fileID: 8300000, guid: 4ade796e5e5a62040bababf0a2ab71ff, type: 3}
     outputGroup: {fileID: -506024407457346661, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
     volume: 1
     playOnAwake: 0
     loop: 1
-  - clip: {fileID: 8300000, guid: 1a8ca75b7ee2b30489ed6c7556e6b522, type: 3}
+  - clip: {fileID: 8300000, guid: d6000b5f22f0cbf45908205cdad7fcd6, type: 3}
     outputGroup: {fileID: -506024407457346661, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
     volume: 1
     playOnAwake: 0
     loop: 1
-  - clip: {fileID: 8300000, guid: 36b680f9cc540654f92dd45c2fb931d1, type: 3}
-    outputGroup: {fileID: -506024407457346661, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
-    volume: 1
-    playOnAwake: 0
-    loop: 1
-  - clip: {fileID: 8300000, guid: ea612e8daf5835a4f91deaa641bc8479, type: 3}
+  - clip: {fileID: 8300000, guid: 8fd31e8eeefa6d543a47f26f689c5865, type: 3}
     outputGroup: {fileID: -506024407457346661, guid: 6d3c5be8949374840b3de0f77c9f8010, type: 2}
     volume: 1
     playOnAwake: 0
