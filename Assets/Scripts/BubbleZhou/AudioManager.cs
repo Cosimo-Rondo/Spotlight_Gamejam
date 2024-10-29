@@ -13,7 +13,7 @@ public class AudioManager : MonoBehaviour
         public string bgmName;
     }
 
-    public List<SceneBGM> 场景BGM列表;
+    //public List<SceneBGM> 场景BGM列表;
     // 存储单个音频的信息
     [System.Serializable]
     public class Sound
@@ -36,7 +36,7 @@ public class AudioManager : MonoBehaviour
     // 每一个音频剪辑的名称对应一个音频组件
     private Dictionary<string, AudioSource> audiosDic;
     // 场景名对应BGM的字典
-    private Dictionary<string, string> 场景名对应BGM = new Dictionary<string, string>();
+    //private Dictionary<string, string> 场景名对应BGM = new Dictionary<string, string>();
     // 当前播放的BGM
     private string currentBGM;
 
@@ -54,18 +54,24 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        // 将场景BGM列表中的数据填充到字典中
-        foreach (var sceneBGM in 场景BGM列表)
-        {
-            场景名对应BGM[sceneBGM.sceneName] = sceneBGM.bgmName;
-        }
-
-        // 初始化
+        // 使用 DontDestroyOnLoad 确保这个物体在场景切换时不会被销毁
         if (_instance == null)
         {
             _instance = this;
+            DontDestroyOnLoad(gameObject);
             audiosDic = new Dictionary<string, AudioSource>();
         }
+        else if (_instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        // 将场景BGM列表中的数据填充到字典中
+        /*foreach (var sceneBGM in 场景BGM列表)
+        {
+            场景名对应BGM[sceneBGM.sceneName] = sceneBGM.bgmName;
+        }*/
     }
 
     // Start is called before the first frame update
@@ -90,13 +96,11 @@ public class AudioManager : MonoBehaviour
             audiosDic.Add(sound.clip.name, source);
         }
 
-        // 播放当前场景对应的BGM
+        /*// 播放当前场景对应的BGM
         if (场景名对应BGM.ContainsKey(SceneManager.GetActiveScene().name))
         {
-            StopBGM();
-            PlayAudio(场景名对应BGM[SceneManager.GetActiveScene().name], false);
-            currentBGM = 场景名对应BGM[SceneManager.GetActiveScene().name];
-        }
+            PlayBGM(场景名对应BGM[SceneManager.GetActiveScene().name]);
+        }*/
     }
 
     /// <summary>
@@ -156,7 +160,7 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning($"名为{name}音频不存在");
             return;
         }
-        _instance.audiosDic[name].Stop();
+        _instance.StartCoroutine(_instance.FadeOut(_instance.audiosDic[name], 1.0f));
     }
 
     /// <summary>
@@ -166,9 +170,22 @@ public class AudioManager : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(_instance.currentBGM) && _instance.audiosDic.ContainsKey(_instance.currentBGM))
         {
-            _instance.audiosDic[_instance.currentBGM].Stop();
+            _instance.StartCoroutine(_instance.FadeOut(_instance.audiosDic[_instance.currentBGM], 2.0f));
             _instance.currentBGM = null;
         }
+    }
+
+    /// <summary>
+    /// 停止当前播放的 BGM 并播放新 BGM
+    /// </summary>
+    private IEnumerator StopCurrentBGMAndPlayNew(string newBGMName)
+    {
+        if (!string.IsNullOrEmpty(currentBGM) && audiosDic.ContainsKey(currentBGM))
+        {
+            yield return StartCoroutine(FadeOut(audiosDic[currentBGM], 2.0f));
+        }
+        currentBGM = newBGMName;
+        StartCoroutine(FadeIn(audiosDic[newBGMName], 2.0f));
     }
 
     /// <summary>
@@ -177,15 +194,14 @@ public class AudioManager : MonoBehaviour
     /// <param name="name">BGM 名称</param>
     public static void PlayBGM(string name)
     {
+        Debug.Log(name);
         if (!_instance.audiosDic.ContainsKey(name) || _instance.audiosDic[name].outputAudioMixerGroup.name != "BGM")
         {
             Debug.LogWarning($"名为{name}的音频不在BGM组，或不存在");
             return;
         }
         {
-            StopBGM();
-            PlayAudio(name, false);
-            _instance.currentBGM = name;
+            _instance.StartCoroutine(_instance.StopCurrentBGMAndPlayNew(name));
         }
     }
     /// <summary>
@@ -197,8 +213,33 @@ public class AudioManager : MonoBehaviour
         {
             if (audio.Value.outputAudioMixerGroup.name == "SFX")
             {
-                audio.Value.Stop();
+                _instance.StartCoroutine(_instance.FadeOut(audio.Value, 1.0f));
             }
         }
+    }
+
+    private IEnumerator FadeIn(AudioSource source, float duration)
+    {
+        source.volume = 0;
+        source.Play();
+        float startVolume = source.volume;
+        while (source.volume < 1)
+        {
+            source.volume += Time.deltaTime / duration;
+            yield return null;
+        }
+        source.volume = 1;
+    }
+
+    private IEnumerator FadeOut(AudioSource source, float duration)
+    {
+        float startVolume = source.volume;
+        while (source.volume > 0)
+        {
+            source.volume -= Time.deltaTime / duration;
+            yield return null;
+        }
+        source.Stop();
+        source.volume = startVolume; // reset to original volume for next play
     }
 }
