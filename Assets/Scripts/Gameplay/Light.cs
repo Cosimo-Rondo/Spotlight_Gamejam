@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Rendering.Universal;
@@ -89,12 +90,14 @@ public class Light : MonoBehaviour
             visualElementAnimator = GetComponentInParent<VisualElementAnimator>();
         }
         originalRotation = transform.rotation.eulerAngles.z;
-        interactionArea = GetComponentInChildren<Selectable>();
     }
     void Start()
     {
         frame = GetComponentInParent<Frame>();
         border = frame.border;
+        interactionArea = GetComponentInChildren<Selectable>();
+        interactionGroup = interactionArea.group;
+        interactionGroup.AddObject(gameObject, false, false);
     }
 
     void Update()
@@ -114,6 +117,7 @@ public class Light : MonoBehaviour
     private bool isMousePosValidLastFrame = false;
     public bool useLegacyInteraction = false;
     public Selectable interactionArea;
+    private SelectableGroup interactionGroup;
     void CheckPlayerInteraction()
     {
         Interaction_Modern();
@@ -240,6 +244,7 @@ public class Light : MonoBehaviour
         }
         if (isMouseHolding)
         {
+            interactionGroup.SetHighlighted(gameObject, true);
             if (operationType == OperationType.Rotate)
             {
                 CheckRotateOperation_Legacy();
@@ -253,6 +258,9 @@ public class Light : MonoBehaviour
                 else CheckMoveOperation();
                 lastMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             }
+        }
+        else {
+            interactionGroup.SetHighlighted(gameObject, false);
         }
         if (currentOperatingLight == this)
         {
@@ -276,10 +284,7 @@ public class Light : MonoBehaviour
     }
     public void PutBack(bool forever = false)
     {
-        isHovering = false;
-        isMouseHolding = false;
-        if (currentOperatingLight == this) currentOperatingLight = null;
-
+        if (!enabled) return;
         visualElementAnimator.Disappear();
         if (!forever)
         {
@@ -291,9 +296,12 @@ public class Light : MonoBehaviour
     }
     void OnDisable()
     {
+        isHovering = false;
+        isMouseHolding = false;
         if (currentOperatingLight == this) currentOperatingLight = null;
         BubbleCursor.RemoveItemToDrag(gameObject);
         BubbleCursor.RemoveItemToRotate(gameObject);
+        if (interactionGroup != null) interactionGroup.SetHighlighted(gameObject, false);
     }
     public void CheckRotateOperation_Legacy()
     {

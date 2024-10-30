@@ -5,7 +5,51 @@ using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
-
+using System;
+public class SelectableGroup{
+    public Dictionary<GameObject, bool> highlighted = new Dictionary<GameObject, bool>();
+    public Dictionary<GameObject, bool> transparent = new Dictionary<GameObject, bool>();
+    public bool isHighlighted()
+    {
+        foreach (var item in highlighted)
+        {
+            if (item.Value) return true;
+        }
+        return false;
+    }
+    public void AddObject(GameObject obj, bool isHighlighted = false, bool isTransparent = false)
+    {
+        highlighted[obj] = isHighlighted;
+        transparent[obj] = isTransparent;
+    }
+    public void SetHighlighted(GameObject obj, bool isHighlighted)
+    {
+        highlighted[obj] = isHighlighted;
+        UpdateStatus();
+    }
+    public void UpdateStatus()
+    {
+        bool hasHighlightedOpaqueObj = false;
+        foreach (GameObject item in highlighted.Keys)
+        {
+            if (highlighted[item] && !transparent[item])
+            {
+                hasHighlightedOpaqueObj = true;
+                break;
+            }
+        }
+        if (hasHighlightedOpaqueObj)
+        {
+            if (BubbleCursor.Instance.currentHighlightGroup == null)
+                BubbleCursor.Instance.currentHighlightGroup = this;
+        }
+        else
+        {
+            if (BubbleCursor.Instance.currentHighlightGroup == this)
+                BubbleCursor.Instance.currentHighlightGroup = null;
+        }
+    }
+}
 public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public UnityEvent onSelectEvent = new UnityEvent();
@@ -26,6 +70,7 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     public bool isRotateArea = false;
     public bool isTransparentArea = true; //不挡鼠标射线，和别的区域之间没有任何影响
     //public bool isActiveZoneForCanvas = false;
+    public SelectableGroup group; //用于多个selectable共用一个对象时识别敌我
 
     public enum SelectType
     {
@@ -71,6 +116,8 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
             mouseDetectArea = GetComponent<Collider2D>();
         }
         originalPos = transform.position;
+        group = new SelectableGroup();
+        group.AddObject(gameObject, false, isTransparentArea);
     }
 
     protected virtual void OnEnable()
@@ -135,6 +182,8 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         if (!isUIElement && BubbleCursor.IsOverUI) return;
         MouseHitCheck();
+        group.UpdateStatus();
+        UpdateAppearance();
         if (selectType == SelectType.MouseClick)
         {
             if (isHighlighted && Input.GetMouseButtonDown(0))
@@ -154,50 +203,19 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
             }
         }
     }
-    void MouseHitCheck()
+    void UpdateAppearance()
     {
-        if (mouseDetectArea != null)
+        if (group.isHighlighted())
         {
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            if (mouseDetectArea.OverlapPoint(mousePosition))
-            {
-                CustomizedOnMouseEnter();
-            }
-            else
-            {
-                CustomizedOnMouseExit();
-            }
+            SetHighlightAppearance();
+        }
+        else
+        {
+            SetUnhighlightAppearance();
         }
     }
-
-    protected virtual void OnSelect()
+    void SetHighlightAppearance()
     {
-        //if (!IsPageActive()) return;
-        //Debug.Log("OnSelect");
-        onSelectEvent.Invoke();
-        if (unhighlightOnSelect)
-        {
-            Unhighlight();
-        }
-    }
-
-    protected virtual void OnUnselect()
-    {
-        //if (!IsPageActive()) return;
-        onUnselectEvent.Invoke();
-    }
-
-    public virtual void Highlight()
-    {
-        //Debug.Log("Highlight");
-        if (isHighlighted) return;
-        if (!isTransparentArea)
-        {
-            if (BubbleCursor.Instance.currentHighlightArea == this) return;
-            if (BubbleCursor.Instance.currentHighlightArea != null) return;
-            BubbleCursor.Instance.currentHighlightArea = this;
-        }
-        isHighlighted = true;
         if (spriteRenderer != null || image != null)
         {
             switch (highlightType)
@@ -254,15 +272,9 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
             originalTextColor = textMeshPro.color;
             textMeshPro.color = highlightColor;
         }
-        //highlightTarget.position = highlightTarget.position + new Vector3(0, 0, -0.1f);
-        onHighlightEvent.Invoke();
     }
-
-    public virtual void Unhighlight()
+    void SetUnhighlightAppearance()
     {
-        if (!isHighlighted) return;
-        isHighlighted = false;
-        if (!isTransparentArea) BubbleCursor.Instance.currentHighlightArea = null;
         if (spriteRenderer != null || image != null)
         {
             switch (highlightType)
@@ -302,7 +314,59 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         {
             textMeshPro.color = originalTextColor;
         }
-        //highlightTarget.position = highlightTarget.position + new Vector3(0, 0, 0.1f);
+    }
+    void MouseHitCheck()
+    {
+        if (mouseDetectArea != null)
+        {
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            if (mouseDetectArea.OverlapPoint(mousePosition))
+            {
+                CustomizedOnMouseEnter();
+            }
+            else
+            {
+                CustomizedOnMouseExit();
+            }
+        }
+    }
+
+    protected virtual void OnSelect()
+    {
+        //if (!IsPageActive()) return;
+        //Debug.Log("OnSelect");
+        onSelectEvent.Invoke();
+        if (unhighlightOnSelect)
+        {
+            Unhighlight();
+        }
+    }
+
+    protected virtual void OnUnselect()
+    {
+        //if (!IsPageActive()) return;
+        onUnselectEvent.Invoke();
+    }
+
+    public virtual void Highlight()
+    {
+        //Debug.Log("Highlight");
+        if (isHighlighted) return;
+        if (!isTransparentArea)
+        {
+            if (BubbleCursor.Instance.currentHighlightGroup != null 
+            && BubbleCursor.Instance.currentHighlightGroup != group) return;
+        }
+        isHighlighted = true;
+        group.SetHighlighted(gameObject, true);
+        onHighlightEvent.Invoke();
+    }
+
+    public virtual void Unhighlight()
+    {
+        if (!isHighlighted) return;
+        isHighlighted = false;
+        group.SetHighlighted(gameObject, false);
         onUnhighlightEvent.Invoke();
     }
 

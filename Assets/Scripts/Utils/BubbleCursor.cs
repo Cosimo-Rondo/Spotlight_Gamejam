@@ -57,7 +57,6 @@ public class BubbleCursor : MonoBehaviour
         Initialize();
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
-
     private void OnDestroy()
     {
         if (_instance == this)
@@ -133,7 +132,7 @@ public class BubbleCursor : MonoBehaviour
         SetCursor(cursorInfo);
     }
 
-    public Selectable currentHighlightArea = null;
+    public SelectableGroup currentHighlightGroup = null;
     [SerializeField] private bool isCursorOverUI = false;
     static public bool IsOverUI => Instance.isCursorOverUI;
     [SerializeField] private bool isCursorInActiveArea = false;
@@ -175,6 +174,10 @@ public class BubbleCursor : MonoBehaviour
     {
         UpdateCursorState();
         UpdateCursorAppearance();
+        if (currentHighlightGroup != null)
+        {
+            Debug.Log("currentHighlightGroup: " + currentHighlightGroup);
+        }
     }
 
     // 新增：更新光标大小的方法

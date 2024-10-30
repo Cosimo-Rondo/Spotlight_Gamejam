@@ -43,4 +43,11 @@ public class Frame : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         rackCollider.enabled = true;
     }
+    public void PutbackLights()
+    {
+        foreach (Light light in lights)
+        {
+            light.PutBack(true);
+        }
+    }
 }

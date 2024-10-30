@@ -301,7 +301,7 @@ MonoBehaviour:
   isDraggable: 0
   isActiveArea: 0
   isRotateArea: 0
-  isTransparentArea: 1
+  isTransparentArea: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -3244,10 +3244,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7465411566715829355}
-        m_TargetAssemblyTypeName: Light, Assembly-CSharp
-        m_MethodName: PutBack
-        m_Mode: 6
+      - m_Target: {fileID: 1661803320}
+        m_TargetAssemblyTypeName: VisualElementAnimator, Assembly-CSharp
+        m_MethodName: Disappear
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3256,9 +3256,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1661803320}
-        m_TargetAssemblyTypeName: VisualElementAnimator, Assembly-CSharp
-        m_MethodName: Disappear
+      - m_Target: {fileID: 7465411566077211124}
+        m_TargetAssemblyTypeName: Frame, Assembly-CSharp
+        m_MethodName: PutbackLights
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3729,7 +3729,7 @@ MonoBehaviour:
   isDraggable: 1
   isActiveArea: 0
   isRotateArea: 0
-  isTransparentArea: 1
+  isTransparentArea: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -4023,7 +4023,7 @@ MonoBehaviour:
   isDraggable: 0
   isActiveArea: 0
   isRotateArea: 0
-  isTransparentArea: 1
+  isTransparentArea: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -8023,7 +8023,7 @@ MonoBehaviour:
   isDraggable: 0
   isActiveArea: 0
   isRotateArea: 0
-  isTransparentArea: 1
+  isTransparentArea: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -9672,7 +9672,7 @@ MonoBehaviour:
   isDraggable: 1
   isActiveArea: 0
   isRotateArea: 0
-  isTransparentArea: 1
+  isTransparentArea: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -10933,7 +10933,7 @@ MonoBehaviour:
   isDraggable: 1
   isActiveArea: 0
   isRotateArea: 0
-  isTransparentArea: 1
+  isTransparentArea: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -17143,7 +17143,7 @@ MonoBehaviour:
   isDraggable: 0
   isActiveArea: 0
   isRotateArea: 0
-  isTransparentArea: 1
+  isTransparentArea: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -18476,7 +18476,7 @@ MonoBehaviour:
   isDraggable: 0
   isActiveArea: 0
   isRotateArea: 0
-  isTransparentArea: 1
+  isTransparentArea: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -20939,7 +20939,7 @@ MonoBehaviour:
   isDraggable: 0
   isActiveArea: 0
   isRotateArea: 0
-  isTransparentArea: 1
+  isTransparentArea: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -23241,7 +23241,7 @@ MonoBehaviour:
   isDraggable: 0
   isActiveArea: 0
   isRotateArea: 0
-  isTransparentArea: 1
+  isTransparentArea: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -33943,7 +33943,7 @@ MonoBehaviour:
   isDraggable: 1
   isActiveArea: 0
   isRotateArea: 0
-  isTransparentArea: 1
+  isTransparentArea: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -36181,7 +36181,7 @@ MonoBehaviour:
   isDraggable: 0
   isActiveArea: 0
   isRotateArea: 0
-  isTransparentArea: 1
+  isTransparentArea: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
