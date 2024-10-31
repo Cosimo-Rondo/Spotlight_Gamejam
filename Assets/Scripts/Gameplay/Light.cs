@@ -284,7 +284,11 @@ public class Light : MonoBehaviour
     }
     public void PutBack(bool forever = false)
     {
-        if (!enabled) return;
+        if (lightIcon != null)
+        {
+            lightIcon.Disappear();
+        }
+        if (!gameObject.activeInHierarchy) return;
         visualElementAnimator.Disappear();
         if (!forever)
         {
