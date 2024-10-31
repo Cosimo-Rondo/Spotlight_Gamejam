@@ -43,7 +43,7 @@ public class Light : MonoBehaviour
 
     public VisualElementAnimator visualElementAnimator;
     public VisualElementAnimator lightIcon;
-    static Light currentOperatingLight = null;
+    //static Light currentOperatingLight = null;
     void Awake()
     {
         // 创建一个名为"mesh"的子物体
@@ -186,16 +186,14 @@ public class Light : MonoBehaviour
     }
     public void Interaction_Modern()
     {
-        if (interactionArea.IsHighlighted())
+        isHovering = interactionArea.IsHighlighted();
+        /*if (currentOperatingLight != null && currentOperatingLight != this) isHovering = false;
+        else isHovering = true;
+        if (currentOperatingLight == null)
         {
-            if (currentOperatingLight != null && currentOperatingLight != this) isHovering = false;
-            else isHovering = true;
-            if (currentOperatingLight == null)
-            {
-                currentOperatingLight = this;
-            }
+            currentOperatingLight = this;
         }
-        else isHovering = false;
+        */
         if (isHovering)
         {   
             if (!isMouseHolding)
@@ -211,7 +209,7 @@ public class Light : MonoBehaviour
                     BubbleCursor.RemoveItemToRotate(gameObject);
                     BubbleCursor.AddItemToDrag(gameObject);
                 }
-                if (Input.GetMouseButton(0))
+                if (Input.GetMouseButtonDown(0))
                 {
                     isMouseHolding = true;
                     lastClickTime = Time.time;
@@ -262,6 +260,7 @@ public class Light : MonoBehaviour
         else {
             interactionGroup.SetHighlighted(gameObject, false);
         }
+        /*
         if (currentOperatingLight == this)
         {
             if (!isHovering && !isMouseHolding)
@@ -270,6 +269,7 @@ public class Light : MonoBehaviour
 
             }
         }
+        */
     }
     public bool IsLightOn()
     {
@@ -302,7 +302,7 @@ public class Light : MonoBehaviour
     {
         isHovering = false;
         isMouseHolding = false;
-        if (currentOperatingLight == this) currentOperatingLight = null;
+        //if (currentOperatingLight == this) currentOperatingLight = null;
         BubbleCursor.RemoveItemToDrag(gameObject);
         BubbleCursor.RemoveItemToRotate(gameObject);
         if (interactionGroup != null) interactionGroup.SetHighlighted(gameObject, false);

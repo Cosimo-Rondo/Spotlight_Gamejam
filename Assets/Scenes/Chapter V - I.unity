@@ -2696,7 +2696,7 @@ MonoBehaviour:
   isDraggable: 0
   isActiveArea: 0
   isRotateArea: 0
-  isTransparentArea: 1
+  isTransparentArea: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -12104,7 +12104,7 @@ MonoBehaviour:
   isDraggable: 0
   isActiveArea: 0
   isRotateArea: 0
-  isTransparentArea: 1
+  isTransparentArea: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4
@@ -13654,7 +13654,7 @@ MonoBehaviour:
   isDraggable: 0
   isActiveArea: 0
   isRotateArea: 0
-  isTransparentArea: 1
+  isTransparentArea: 0
   unhighlightOnSelect: 0
   selectType: 0
   highlightType: 4

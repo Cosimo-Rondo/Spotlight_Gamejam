@@ -28,6 +28,8 @@ public class PuzzleItem : MonoBehaviour
         {
             selectable = gameObject.AddComponent<Selectable>();
             selectable.highlightType = Selectable.HighlightType.Scale;
+            selectable.isDraggable = true;
+            selectable.SetTransparent(false);
         }
         originalLocalPos = transform.localPosition;
     }

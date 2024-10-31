@@ -27,6 +27,11 @@ public class SelectableGroup{
         highlighted[obj] = isHighlighted;
         UpdateStatus();
     }
+    public void SetTransparent(GameObject obj, bool isTransparent)
+    {
+        transparent[obj] = isTransparent;
+        UpdateStatus();
+    }
     public void UpdateStatus()
     {
         bool hasHighlightedOpaqueObj = false;
@@ -117,7 +122,11 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         }
         originalPos = transform.position;
         group = new SelectableGroup();
-        group.AddObject(gameObject, false, isTransparentArea);
+    }
+    public void SetTransparent(bool isTransparent)
+    {
+        this.isTransparentArea = isTransparent;
+        if (group != null) group.SetTransparent(gameObject, isTransparent);
     }
 
     protected virtual void OnEnable()
@@ -132,6 +141,8 @@ public class Selectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     }
     protected virtual void Start()
     {
+        group.AddObject(gameObject, false, isTransparentArea);
+
         if (spriteRenderer == null)
         {
             spriteRenderer = highlightTarget.GetComponentInChildren<SpriteRenderer>();
